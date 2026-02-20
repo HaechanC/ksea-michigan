@@ -1,1 +1,454 @@
-This is the eboard section
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KSEA - University of Michigan | E-Board</title>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #F5F1E8;
+      overflow-x: hidden;
+      color: #3F5DAE;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background-color: #F5F1E8;
+      border-bottom: 2px solid #3F5DAE;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo-circle {
+      width: 100px;
+      height: 100px;
+      background-color: #3F5DAE;
+      border-radius: 60%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 12px;
+      overflow: hidden;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo-text .ksea {
+      font-size: 60px;
+      font-weight: 900;
+      color: #3F5DAE;
+      letter-spacing: 2px;
+    }
+
+    .logo-text .university {
+      font-size: 16px;
+      color: #3F5DAE;
+      font-weight: 600;
+    }
+
+    .logo-text .divider {
+      font-size: 36px;
+      color: #3F5DAE;
+      font-weight: 100;
+      margin: 0 5px;
+    }
+
+    nav {
+      display: flex;
+      gap: 100px;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #3F5DAE;
+      font-size: 24px;
+      font-weight: 200;
+      transition: color 0.3s;
+    }
+
+    nav a:hover { color: #3d4d7a; }
+
+    .page {
+      padding: 60px 60px 80px;
+      position: relative;
+    }
+
+    .page-title {
+      font-size: 64px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .page-subtitle {
+      font-size: 18px;
+      font-weight: 400;
+      opacity: 0.9;
+      max-width: 760px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .curve-left {
+      position: absolute;
+      left: -100px;
+      top: 140px;
+      width: 360px;
+      height: 360px;
+      border: 3px solid #3F5DAE;
+      border-radius: 50%;
+      border-top: none;
+      border-right: none;
+      opacity: 0.45;
+      pointer-events: none;
+    }
+
+    .curve-right {
+      position: absolute;
+      right: -60px;
+      bottom: -30px;
+      width: 320px;
+      height: 520px;
+      border: 3px solid #3F5DAE;
+      border-radius: 50%;
+      border-bottom: none;
+      border-left: none;
+      opacity: 0.45;
+      pointer-events: none;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .card {
+      border-radius: 18px;
+      background: rgba(255,255,255,0.55);
+      border: 2px solid rgba(63,93,174,0.18);
+      box-shadow: 0 12px 30px rgba(63,93,174,0.12);
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 40px rgba(63,93,174,0.18);
+      border-color: rgba(63,93,174,0.28);
+    }
+
+    .headshot-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      background: rgba(63,93,174,0.06);
+    }
+
+    .headshot-wrap img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: opacity 180ms ease;
+    }
+
+    .headshot-front { opacity: 1; }
+    .headshot-back { opacity: 0; }
+
+    .card:hover .headshot-front { opacity: 0; }
+    .card:hover .headshot-back { opacity: 1; }
+
+    .card-body {
+      padding: 16px 16px 18px;
+    }
+
+    .name-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+
+    .name {
+      font-size: 22px;
+      font-weight: 900;
+      color: #3F5DAE;
+      line-height: 1.2;
+    }
+
+    .position {
+      font-size: 14px;
+      font-weight: 700;
+      color: #3F5DAE;
+      opacity: 0.9;
+      white-space: nowrap;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 15px;
+      font-weight: 500;
+      color: rgba(63,93,174,0.92);
+      margin-bottom: 12px;
+    }
+
+    .meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .dot {
+      opacity: 0.65;
+      font-weight: 800;
+    }
+
+    .hobbies {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .pill {
+      font-size: 13px;
+      font-weight: 600;
+      color: #3F5DAE;
+      background: rgba(63,93,174,0.10);
+      border: 1px solid rgba(63,93,174,0.18);
+      padding: 7px 10px;
+      border-radius: 999px;
+    }
+
+    .section-label {
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: rgba(63,93,174,0.9);
+      margin: 26px 0 12px;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 1024px) {
+      header { padding: 20px 30px; }
+      .page { padding: 50px 30px 70px; }
+      .page-title { font-size: 52px; }
+      nav { gap: 30px; }
+      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 768px) {
+      header { flex-direction: column; gap: 20px; }
+      nav { gap: 20px; flex-wrap: wrap; justify-content: center; }
+      .page-title { font-size: 40px; text-align: center; }
+      .page-subtitle { text-align: center; margin-left: auto; margin-right: auto; }
+      .curve-left, .curve-right { display: none; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo-container">
+      <div class="logo-circle">
+        <img src="../images/ksea_logo.jpg" alt="ksea logo" style="width: 100px; height: 100px; border-radius: 50%; object-fit: contain">
+      </div>
+      <div class="logo-text">
+        <span class="ksea">KSEA</span>
+        <span class="divider"> | </span>
+        <span class="university">University<br>of Michigan</span>
+      </div>
+    </div>
+
+    <nav>
+      <a href="/events/events.html">Events</a>
+      <a href="/eboard/eboard.html">E-Board</a>
+      <a href="/join/join.html">Join</a>
+      <a href="https://www.instagram.com/ksea.michigan/" target="_blank" class="instagram-link">
+        <i class="fab fa-instagram" style="font-size: 32px; color: #141ad9;"></i>
+      </a>
+    </nav>
+  </header>
+
+  <section class="page">
+    <div class="curve-left"></div>
+    <div class="curve-right"></div>
+
+    <h1 class="page-title">E-Board</h1>
+    <p class="page-subtitle">
+      Meet the team running KSEA Michigan this year. Say hi at events or reach out if you want to get involved.
+    </p>
+
+    <div class="section-label">2025–2026 Team</div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="headshot-wrap">
+          <img class="headshot-front" src="../images/president.jpg" alt="headshot" onerror="this.onerror=null; this.src='../images/placeholder.jpg'">
+          <img class="headshot-back" src="../images/president_fun.jpg" alt="fun photo" onerror="this.onerror=null; this.src='../images/placeholder.jpg'">
+        </div>
+        <div class="card-body">
+          <div class="name-row">
+            <div class="name">Full Name</div>
+            <div class="position">President</div>
+          </div>
+          <div class="meta">
+            <span>Computer Science</span>
+            <span class="dot">•</span>
+            <span>Junior</span>
+          </div>
+          <div class="hobbies">
+            <span class="pill">Hiking</span>
+            <span class="pill">Coffee</span>
+            <span class="pill">Pickleball</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="headshot-wrap">
+          <img class="headshot-front" src="../images/vp.jpg" alt="headshot" onerror="this.onerror=null; this.src='../images/placeholder.jpg'">
+          <img class="headshot-back" src="../images/vp_fun.jpg" alt="fun photo" onerror="this.onerror=null; this.src='../images/placeholder.jpg'">
+        </div>
+        <div class="card-body">
+          <div class="name-row">
+            <div class="name">Full Name</div>
+            <div class="position">Vice President</div>
+          </div>
+          <div class="meta">
+            <span>Mechanical Engineering</span>
+            <span class="dot">•</span>
+            <span>Senior</span>
+          </div>
+          <div class="hobbies">
+            <span class="pill">Gym</span>
+            <span class="pill">Cooking</span>
+            <span class="pill">K-dramas</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="headshot-wrap">
+          <img class="headshot-front" src="../images/treasurer.jpg" alt="headshot" onerror="this.onerror=null; this.src='../images/placeholder.jpg'">
+          <img class="headshot-back" src="../images/treasurer_fun.jpg" alt="fun photo" onerror="this.onerror=null; this.src='../images/placeholder.jpg'">
+        </div>
+        <div class="card-body">
+          <div class="name-row">
+            <div class="name">Full Name</div>
+            <div class="position">Treasurer</div>
+          </div>
+          <div class="meta">
+            <span>Business</span>
+            <span class="dot">•</span>
+            <span>Sophomore</span>
+          </div>
+          <div class="hobbies">
+            <span class="pill">Finance</span>
+            <span class="pill">Basketball</span>
+            <span class="pill">Boba</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="headshot-wrap">
+          <img class="headshot-front" src="../images/secretary.jpg" alt="headshot" onerror="this.onerror=null; this.src='../images/placeholder.jpg'">
+          <img class="headshot-back" src="../images/secretary_fun.jpg" alt="fun photo" onerror="this.onerror=null; this.src='../images/placeholder.jpg'">
+        </div>
+        <div class="card-body">
+          <div class="name-row">
+            <div class="name">Full Name</div>
+            <div class="position">Secretary</div>
+          </div>
+          <div class="meta">
+            <span>Biology</span>
+            <span class="dot">•</span>
+            <span>Junior</span>
+          </div>
+          <div class="hobbies">
+            <span class="pill">Volunteering</span>
+            <span class="pill">Reading</span>
+            <span class="pill">Running</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="headshot-wrap">
+          <img class="headshot-front" src="../images/events.jpg" alt="headshot" onerror="this.onerror=null; this.src='../images/placeholder.jpg'">
+          <img class="headshot-back" src="../images/events_fun.jpg" alt="fun photo" onerror="this.onerror=null; this.src='../images/placeholder.jpg'">
+        </div>
+        <div class="card-body">
+          <div class="name-row">
+            <div class="name">Full Name</div>
+            <div class="position">Events Chair</div>
+          </div>
+          <div class="meta">
+            <span>Electrical Engineering</span>
+            <span class="dot">•</span>
+            <span>Senior</span>
+          </div>
+          <div class="hobbies">
+            <span class="pill">Music</span>
+            <span class="pill">Travel</span>
+            <span class="pill">Photography</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="headshot-wrap">
+          <img class="headshot-front" src="../images/outreach.jpg" alt="headshot" onerror="this.onerror=null; this.src='../images/placeholder.jpg'">
+          <img class="headshot-back" src="../images/outreach_fun.jpg" alt="fun photo" onerror="this.onerror=null; this.src='../images/placeholder.jpg'">
+        </div>
+        <div class="card-body">
+          <div class="name-row">
+            <div class="name">Full Name</div>
+            <div class="position">Outreach</div>
+          </div>
+          <div class="meta">
+            <span>Chemical Engineering</span>
+            <span class="dot">•</span>
+            <span>Freshman</span>
+          </div>
+          <div class="hobbies">
+            <span class="pill">Design</span>
+            <span class="pill">K-pop</span>
+            <span class="pill">Board games</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
