@@ -34,6 +34,20 @@
             gap: 15px;
         }
 
+        .logo-link {
+        text-decoration: none;
+        color: inherit;
+        display: inline-flex;      /* keeps layout */
+        align-items: center;
+        cursor: pointer;
+        }
+
+        .logo-link:focus-visible {
+        outline: 3px solid rgba(63, 93, 174, 0.6);
+        outline-offset: 6px;
+        border-radius: 14px;
+        }
+
         .logo-circle {
             width: 100px;
             height: 100px;
@@ -453,16 +467,19 @@
 <body>
     <!-- Header -->
     <header>
+        <a href="../main/main.html" class="logo-link" aria-label="Go to home page">
         <div class="logo-container">
             <div class="logo-circle">
-                <img src="../images/ksea_logo.jpg" alt="ksea logo" style="width: 100px; height: 100px; border-radius: 50%; object-fit: contain">
+            <img src="../images/ksea_logo.jpg" alt="ksea logo"
+                style="width:100px;height:100px;border-radius:50%;object-fit:contain;">
             </div>
             <div class="logo-text">
-                <span class="ksea">KSEA</span>
-                <span class="divider"> | </span>
-                <span class="university">University<br>of Michigan</span>
+            <span class="ksea">KSEA</span>
+            <span class="divider"> | </span>
+            <span class="university">University<br>of Michigan</span>
             </div>
         </div>
+        </a>
         <nav>
             <a href="/events/events.html">Events</a>
             <a href="/eboard/eboard.html">E-Board</a>
