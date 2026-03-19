@@ -1,1 +1,443 @@
-This is the join info section
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KSEA - University of Michigan | Join</title>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #F5F1E8;
+      --primary: #3F5DAE;
+      --primary-dark: #3d4d7a;
+      --white: #ffffff;
+      --border-soft: rgba(63,93,174,0.20);
+      --border-soft-2: rgba(63,93,174,0.25);
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg);
+      overflow-x: hidden;
+      color: var(--primary);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background-color: var(--bg);
+      border-bottom: 2px solid var(--primary);
+    }
+
+    .logo-container { display: flex; align-items: center; gap: 15px; }
+    .logo-circle {
+      width: 100px;
+      height: 100px;
+      background-color: var(--primary);
+      border-radius: 60%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .logo-link,
+    .logo-link:visited,
+    .logo-link:hover,
+    .logo-link:active {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .logo-text { display: flex; flex-direction: row; align-items: center; gap: 8px; }
+    .logo-text .ksea {
+      font-size: 60px;
+      font-weight: 900;
+      color: var(--primary);
+      letter-spacing: 2px;
+    }
+    .logo-text .divider {
+      font-size: 36px;
+      color: var(--primary);
+      font-weight: 100;
+      margin: 0 5px;
+    }
+    .logo-text .university {
+      font-size: 16px;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    nav { display: flex; gap: 100px; align-items: center; }
+    nav a {
+      text-decoration: none;
+      color: var(--primary);
+      font-size: 24px;
+      font-weight: 200;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: var(--primary-dark); }
+
+    nav a.active {
+      font-weight: 600;
+      position: relative;
+    }
+    nav a.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 100%;
+      height: 2px;
+      background: var(--primary);
+      opacity: 0.9;
+    }
+
+    .page {
+      position: relative;
+      padding: 60px 60px 80px;
+    }
+
+    .curve-1, .curve-2 {
+      position: absolute;
+      border: 3px solid var(--primary);
+      border-radius: 50%;
+      pointer-events: none;
+      opacity: 0.35;
+    }
+    .curve-1 {
+      width: 520px;
+      height: 520px;
+      left: -160px;
+      top: 110px;
+      border-top: none;
+      border-right: none;
+    }
+    .curve-2 {
+      width: 420px;
+      height: 700px;
+      right: -120px;
+      top: 220px;
+      border-bottom: none;
+      border-left: none;
+    }
+
+    .join-hero {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+    }
+
+    .page-title {
+      font-size: 64px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .page-subtitle {
+      font-size: 18px;
+      font-weight: 400;
+      opacity: 0.9;
+      max-width: 760px;
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+
+    .pill-row {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+      margin-top: 36px;
+      flex-wrap: wrap;
+    }
+
+    a.pill,
+    a.pill:visited {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      text-decoration: none;
+      border: 3px solid var(--primary);
+      background: transparent;
+      color: var(--primary);
+      padding: 16px 38px;
+      border-radius: 999px;
+      font-weight: 900;
+      cursor: pointer;
+      transition: transform 0.15s, background 0.2s, color 0.2s, box-shadow 0.2s;
+      font-size: 22px;
+      user-select: none;
+      box-shadow: 0 3px 0 rgba(63,93,174,0.12);
+    }
+    a.pill:hover {
+      transform: translateY(-1px);
+      color: var(--primary);
+    }
+    a.pill:active {
+      transform: translateY(2px) scale(0.98);
+      box-shadow: 0 0 0 rgba(0,0,0,0);
+    }
+
+    a.pill.active,
+    a.pill.active:visited {
+      background: var(--primary);
+      color: var(--white);
+    }
+    a.pill.active:hover {
+      color: var(--white);
+    }
+
+    .join-timeline-section {
+      position: relative;
+      z-index: 2;
+      margin-top: 56px;
+      max-width: 920px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .timeline-section-title {
+      font-size: 44px;
+      font-weight: 900;
+      letter-spacing: 0.4px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .timeline-section-intro {
+      font-size: 16px;
+      line-height: 1.65;
+      opacity: 0.88;
+      margin-bottom: 28px;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 640px;
+      text-align: center;
+    }
+
+    .timeline {
+      list-style: none;
+      position: relative;
+      padding: 0;
+      margin: 0;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: var(--primary);
+      transform: translateX(-50%);
+      z-index: 0;
+    }
+
+    .timeline-item {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 36px minmax(0, 1fr);
+      gap: 0 20px;
+      align-items: start;
+      padding-bottom: 28px;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-item::before {
+      content: "";
+      grid-column: 2;
+      grid-row: 1;
+      justify-self: center;
+      margin-top: 6px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--primary);
+      border: 3px solid var(--bg);
+      box-sizing: content-box;
+      z-index: 2;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-card {
+      grid-column: 1;
+      grid-row: 1;
+      justify-self: end;
+      max-width: min(100%, 380px);
+      text-align: right;
+    }
+
+    .timeline-item:nth-child(even) .timeline-card {
+      grid-column: 3;
+      grid-row: 1;
+      justify-self: start;
+      max-width: min(100%, 380px);
+      text-align: left;
+    }
+
+    .timeline-card {
+      background: rgba(255,255,255,0.55);
+      border: 2px solid var(--border-soft);
+      border-radius: 18px;
+      padding: 18px 20px 20px;
+      box-shadow: 0 12px 30px rgba(63,93,174,0.12);
+    }
+
+    .timeline-card h3 {
+      font-size: 22px;
+      font-weight: 900;
+      margin-bottom: 8px;
+      line-height: 1.2;
+    }
+
+    .timeline-card .timeline-meta {
+      font-size: 14px;
+      font-weight: 700;
+      opacity: 0.85;
+      margin-bottom: 10px;
+    }
+
+    .timeline-card p {
+      font-size: 15px;
+      line-height: 1.65;
+      opacity: 0.88;
+    }
+
+    @media (max-width: 1024px) {
+      header { padding: 20px 30px; }
+      .page { padding: 50px 30px 70px; }
+      .page-title { font-size: 52px; }
+      nav { gap: 40px; }
+      .curve-1, .curve-2 { display: none; }
+    }
+
+    @media (max-width: 768px) {
+      header { flex-direction: column; gap: 16px; }
+      nav { gap: 20px; flex-wrap: wrap; justify-content: center; }
+      .page-title { font-size: 40px; text-align: center; }
+      .page-subtitle { text-align: center; margin-left: auto; margin-right: auto; }
+      .join-hero { margin-left: auto; margin-right: auto; }
+      .pill-row { justify-content: center; }
+      a.pill { font-size: 18px; padding: 14px 26px; }
+      .join-timeline-section { margin-left: auto; margin-right: auto; }
+      .timeline-section-title { font-size: 36px; text-align: center; }
+      .logo-text .ksea { font-size: 52px; }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+      }
+
+      .timeline-item::before {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: center;
+        margin-top: 0;
+        margin-bottom: 4px;
+      }
+
+      .timeline-item:nth-child(odd) .timeline-card,
+      .timeline-item:nth-child(even) .timeline-card {
+        grid-column: 1;
+        grid-row: 2;
+        justify-self: stretch;
+        max-width: none;
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="../main/main.html" class="logo-link">
+      <div class="logo-container">
+        <div class="logo-circle">
+          <img src="../images/ksea_logo.jpg" alt="ksea logo"
+            style="width:100px;height:100px;border-radius:50%;object-fit:contain;">
+        </div>
+        <div class="logo-text">
+          <span class="ksea">KSEA</span>
+          <span class="divider"> | </span>
+          <span class="university">University<br>of Michigan</span>
+        </div>
+      </div>
+    </a>
+    <nav>
+      <a href="/events/events.html">Events</a>
+      <a href="/eboard/eboard.html">E-Board</a>
+      <a class="active" href="/join/join.html">Join</a>
+      <a href="https://www.instagram.com/ksea.michigan/" target="_blank" rel="noopener noreferrer" class="instagram-link">
+        <i class="fab fa-instagram" style="font-size: 32px; color: #141ad9;"></i>
+      </a>
+    </nav>
+  </header>
+
+  <div class="page">
+    <div class="curve-1"></div>
+    <div class="curve-2"></div>
+
+    <div class="join-hero">
+      <h1 class="page-title">Join</h1>
+      <p class="page-subtitle">
+        Text
+        Text
+        Text
+      </p>
+
+      <div class="pill-row">
+        <a class="pill active" href="#register-ksea">Register here </a>
+        <a class="pill" href="#mailing-list">Join mailing list</a>
+        <a class="pill" href="#committees" title="Instagram">Join committees</a>
+      </div>
+    </div>
+
+    <section class="join-timeline-section" aria-labelledby="rush-heading">
+      <h2 id="rush-heading" class="timeline-section-title">Fall 2026 Rush</h2>
+      <p class="timeline-section-intro">
+        Sub-text Sub-text
+        Sub-text Sub-text
+      </p>
+
+      <ol class="timeline">
+        <li class="timeline-item">
+          <div class="timeline-card">
+            <h3>Mass meeting</h3>
+            <div class="timeline-meta">TBD</div>
+            <p>
+              Text
+            </p>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-card">
+            <h3>Picnic social</h3>
+            <div class="timeline-meta">TBD</div>
+            <p>
+              Text
+            </p>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-card">
+            <h3>Committee interest</h3>
+            <div class="timeline-meta">TBD</div>
+            <p>
+              Text
+            </p>
+          </div>
+        </li>
+      </ol>
+    </section>
+  </div>
+</body>
+</html>
