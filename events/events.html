@@ -296,16 +296,13 @@
       gap: 18px;
     }
 
-    .photo-card.light{
-      background: white;
-      border: 2px solid var(--border-soft-2);
-      border-radius: 14px;
-      height: 165px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      overflow:hidden;
-    }
+   .photo-card.light{
+  width: 350px;
+  height: 200px;
+  border: 5px solid #cfd8f6;
+  overflow: hidden;
+  border-radius: 22px;
+}
 
     .img-ph{
       width: 74%;
@@ -318,6 +315,44 @@
       color: rgba(63,93,174,0.85);
       font-size: 28px;
     }
+
+    .photo-card.light img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.event-card.text-only{
+  grid-template-columns: 1fr;
+  padding: 24px 28px;
+}
+    .top-circle-image{
+  overflow: hidden;
+  border-radius: 50%;
+  border: 6px solid white;
+  background: white;
+  box-shadow: 0 0 0 2px rgba(63,93,174,0.18);
+  flex-shrink: 0;
+}
+
+.top-circle-image.large{
+  width: 155px;
+  height: 155px;
+}
+
+.top-circle-image.small{
+  width: 105px;
+  height: 105px;
+  margin-top: 56px;
+}
+
+.top-circle-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
     .under-images-text{
       margin-top: 18px;
@@ -472,9 +507,8 @@
         <div class="events-title">Events</div>
 
         <div class="events-links">
-          Events Overview Text, Infodjfalsdkfjalsd<br>
-          Events Overview Text, Infolasdjfsd<br>
-          Events Overview Text, Infolasdkfjsdf
+          KSEA has many fun academic and social events to bring together our Korean-American and Korean community on campus! Through our events, our members have met so many new friends and connections. We always welcome anyone to come to our events; hope to see you soon! 😄<br>
+          
         </div>
 
         <!-- Buttons -->
@@ -486,15 +520,18 @@
       </div>
 
       <!-- Curve Designs -->
-      <div style="display:flex; gap:18px; justify-content:flex-end; align-items:flex-start;">
-        <div class="photo-card light" style="width:140px; height:140px; border-radius: 999px;">
-          <div class="img-ph" style="width:70%; height:70%; border-radius: 18px;"><i class="fa-regular fa-image"></i></div>
-        </div>
-        <div class="photo-card light" style="width:96px; height:96px; border-radius: 999px; margin-top: 56px;">
-          <div class="img-ph" style="width:70%; height:70%; border-radius: 14px;"><i class="fa-regular fa-image"></i></div>
-        </div>
-      </div>
-    </section>
+<div style="display:flex; justify-content:flex-end; align-items:flex-start;">
+  <div class="photo-card light" style="width:300px; height:300px; border-radius:50%; padding:0; border:8px solid #c7d2f5; overflow:hidden; z-index:2;">
+    <img src="../event_images/board.JPG" alt="KSEA event photo"
+         style="width:100%; height:100%; object-fit:cover; border-radius:50%; display:block;">
+  </div>
+
+  <div class="photo-card light" style="width:250px; height:250px; border-radius:50%; margin-top:90px; margin-left:-35px; padding:0; border:8px solid #c7d2f5; overflow:hidden; z-index:1;">
+    <img src="../event_images/ksea3.jpg" alt="KSEA event photo"
+         style="width:100%; height:100%; object-fit:cover; border-radius:50%; display:block;">
+  </div>
+</div>
+</section>
 
     <!-- Upcoming -->
     <section class="upcoming-band" id="upcoming">
@@ -507,13 +544,13 @@
 
         <div class="upcoming-band-cards">
           <div class="upcoming-band-card">
-            <h4>Event Title</h4>
-            <p>Event Text Event Text<br>Event Text Event Text</p>
+            <h4>🌸 Annual Spring Formal 🌸</h4>
+            <p>April 3rd, 2026<br>Our annual spring formal is coming soon. The evening will be filled with many fun games, chances to meet new people, and good food! RSVP <a target="_blank" href="https://forms.gle/GBcNENhhGuQpVwyR8?utm_source=ig&utm_medium=social&utm_content=link_in_bio">here!</a></p>
           </div>
 
           <div class="upcoming-band-card">
-            <h4>Event Title</h4>
-            <p>Event Text Event Text<br>Event Text Event Text</p>
+            <h4>Coming soon... 😊</h4>
+            <p>Look out for more events!</p>
           </div>
         </div>
       </div>
@@ -527,93 +564,105 @@
 
       <div class="grid-two">
         <div>
-          <div class="photo-grid">
-            <div class="photo-card light"><div class="img-ph"><i class="fa-regular fa-image"></i></div></div>
-            <div class="photo-card light"><div class="img-ph"><i class="fa-regular fa-image"></i></div></div>
-            <div class="photo-card light"><div class="img-ph"><i class="fa-regular fa-image"></i></div></div>
-            <div class="photo-card light"><div class="img-ph"><i class="fa-regular fa-image"></i></div></div>
-          </div>
+
+
+<div class="photo-grid">
+  <div class="photo-card light">
+    <img src="../event_images/social1.jpg" alt="KSEA social event photo">
+  </div>
+  <div class="photo-card light">
+    <img src="../event_images/social2.jpg" alt="KSEA social event photo">
+  </div>
+  <div class="photo-card light">
+    <img src="../event_images/social3.jpg" alt="KSEA social event photo">
+  </div>
+  <div class="photo-card light">
+    <img src="../event_images/social4.jpg" alt="KSEA social event photo">
+  </div>
+</div>
 
           <p class="under-images-text">
-            brief description about our social events here and add images of them above
+            Here are some pictures from past social events 🧺
           </p>
         </div>
 
         <div class="event-stack">
-          <div class="event-card">
-            <div class="event-thumb"><i class="fa-regular fa-image"></i></div>
-            <div>
-              <h3>Event Title</h3>
-              <p>Event Text Event Text Event Text Event Text Event Text</p>
-            </div>
-          </div>
+          <div class="event-card text-only">
+  <div>
+    <h3>Game Night</h3>
+    <p>Game night is a night full of fun games, prizes to win, and people to meet! You're able to play the games in teams and bond with your teammates.</p>
+  </div>
+</div>
 
-          <div class="event-card">
-            <div class="event-thumb"><i class="fa-regular fa-image"></i></div>
-            <div>
-              <h3>Event Title</h3>
-              <p>Event Text Event Text Event Text Event Text Event Text</p>
-            </div>
-          </div>
+<div class="event-card text-only">
+  <div>
+    <h3>Picnic Social</h3>
+    <p>When the weather is warm in the beginning of the year, we always host a picnic social with yummy snacks and games.</p>
+  </div>
+</div>
 
-          <div class="event-card">
-            <div class="event-thumb"><i class="fa-regular fa-image"></i></div>
-            <div>
-              <h3>Event Title</h3>
-              <p>Event Text Event Text Event Text Event Text Event Text</p>
-            </div>
-          </div>
+<div class="event-card text-only">
+  <div>
+    <h3>Caffeine Chats</h3>
+    <p>This is an event where we provide caffeinated drinks and let you get to know board members. It is especially helpful if you want to talk to board members to meet them, catch up with them, or even ask them for advice on anything!</p>
+  </div>
+</div>
         </div>
       </div>
     </section>
 
-    <!-- Professional -->
-    <section class="section blue" id="professional">
-      <div class="section-heading">
-        <div class="section-title">Professional</div>
+   <!-- Professional -->
+<section class="section blue" id="professional">
+  <div class="section-heading">
+    <div class="section-title">Professional</div>
+  </div>
+
+  <div class="grid-two">
+    <div>
+      <div class="photo-grid">
+        <div class="photo-card light">
+          <img src="../event_images/prof1.jpg" alt="KSEA professional event photo">
+        </div>
+        <div class="photo-card light">
+          <img src="../event_images/prof2.jpeg" alt="KSEA professional event photo">
+        </div>
+        <div class="photo-card light">
+          <img src="../event_images/prof3.jpg" alt="KSEA professional event photo">
+        </div>
+        <div class="photo-card light">
+          <img src="../event_images/prof4.jpeg" alt="KSEA professional event photo">
+        </div>
       </div>
 
-      <div class="grid-two">
+      <p class="under-images-text">
+        Here are some pictures from past professional events 👩🏻‍💻
+      </p>
+    </div>
+
+    <div class="event-stack">
+      <div class="event-card text-only">
         <div>
-          <div class="photo-grid">
-            <div class="photo-card light"><div class="img-ph"><i class="fa-regular fa-image"></i></div></div>
-            <div class="photo-card light"><div class="img-ph"><i class="fa-regular fa-image"></i></div></div>
-            <div class="photo-card light"><div class="img-ph"><i class="fa-regular fa-image"></i></div></div>
-            <div class="photo-card light"><div class="img-ph"><i class="fa-regular fa-image"></i></div></div>
-          </div>
-
-          <p class="under-images-text">
-            again talk about our professional events here and also add images above
-          </p>
-        </div>
-
-        <div class="event-stack">
-          <div class="event-card">
-            <div class="event-thumb"><i class="fa-regular fa-image"></i></div>
-            <div>
-              <h3>Event Title</h3>
-              <p>Event Text Event Text Event Text Event Text Event Text</p>
-            </div>
-          </div>
-
-          <div class="event-card">
-            <div class="event-thumb"><i class="fa-regular fa-image"></i></div>
-            <div>
-              <h3>Event Title</h3>
-              <p>Event Text Event Text Event Text Event Text Event Text</p>
-            </div>
-          </div>
-
-          <div class="event-card">
-            <div class="event-thumb"><i class="fa-regular fa-image"></i></div>
-            <div>
-              <h3>Event Title</h3>
-              <p>Event Text Event Text Event Text Event Text Event Text</p>
-            </div>
-          </div>
+          <h3>Backpacking Events</h3>
+          <p>We host this event every semester during backpacking season. Our board has a variety of STEM majors you can ask for advice on which classes to choose. We also offer career advice and four-year plan advice in a casual setting.</p>
         </div>
       </div>
-    </section>
+
+      <div class="event-card text-only">
+        <div>
+          <h3>Build Your Profile Workshop</h3>
+          <p>This workshop is meant to teach attendees how to build a professional profile, where topics we help with range from recruiting for internships, resume or LinkedIn building, and general professional advice.</p>
+        </div>
+      </div>
+
+      <div class="event-card text-only">
+        <div>
+          <h3>Headshot Events</h3>
+          <p>We help you get a professional headshot for free! We usually host this event in the fall semester.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
     <div style="height: 40px;"></div>
   </div>
