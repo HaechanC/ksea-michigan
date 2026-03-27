@@ -533,29 +533,68 @@
         </ul>
     </div>
 
-    <!-- Group Photo — update src to your actual image path -->
-    <div class="photo-wrapper">
-        <img src="../images/group_photo.jpg" alt="KSEA Group Photo"
-             onerror="this.outerHTML='<div class=\'photo-placeholder\'>[Group Photo]</div>'">
+    <!-- Image Carousel -->
+    <div class="photo-wrapper" style="position: relative; max-width: 620px; margin: 0 auto 60px; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.35);">
+        
+        <div id="carousel-track" style="display: flex; transition: transform 0.5s ease;">
+            <img src="../images/group_photo1.jpg" alt="KSEA Group Photo" style="min-width:100%; height:340px; object-fit:cover;">
+            <img src="../images/group_photo3.jpg" alt="KSEA Group hoto" style="min-width:100%; height:340px; object-fit:cover;">
+            <img src="../images/group_photo4.jpg" alt="KSEA Group Photo" style="min-width:100%; height:340px; object-fit:cover;">
+            <img src="../images/event.jpg" alt="KSEA event" style="min-width:100%; height:340px; object-fit:cover;">
+        </div>
+
+        <!-- Prev / Next buttons -->
+        <button onclick="moveCarousel(-1)" style="position:absolute; left:12px; top:50%; transform:translateY(-50%); background:rgba(255,255,255,0.25); border:none; color:white; font-size:24px; width:44px; height:44px; border-radius:50%; cursor:pointer; backdrop-filter:blur(4px);">&#8592;</button>
+        <button onclick="moveCarousel(1)"  style="position:absolute; right:12px; top:50%; transform:translateY(-50%); background:rgba(255,255,255,0.25); border:none; color:white; font-size:24px; width:44px; height:44px; border-radius:50%; cursor:pointer; backdrop-filter:blur(4px);">&#8594;</button>
+
+        <!-- Dots -->
+        <div id="carousel-dots" style="position:absolute; bottom:12px; left:50%; transform:translateX(-50%); display:flex; gap:8px;"></div>
     </div>
+
+    <script>
+        const track = document.getElementById('carousel-track');
+        const dotsContainer = document.getElementById('carousel-dots');
+        const slides = track.children;
+        const total = slides.length;
+        let current = 0;
+
+        for (let i = 0; i < total; i++) {
+            const dot = document.createElement('div');
+            dot.style.cssText = `width:8px;height:8px;border-radius:50%;background:${i===0?'white':'rgba(255,255,255,0.4)'};cursor:pointer;transition:background 0.3s;`;
+            dot.onclick = () => goTo(i);
+            dotsContainer.appendChild(dot);
+        }
+
+        function goTo(index) {
+            current = (index + total) % total;
+            track.style.transform = `translateX(-${current * 100}%)`;
+            [...dotsContainer.children].forEach((d, i) =>
+                d.style.background = i === current ? 'white' : 'rgba(255,255,255,0.4)'
+            );
+        }
+
+        function moveCarousel(dir) { goTo(current + dir); }
+
+        setInterval(() => moveCarousel(1), 4000);
+    </script>
 
     <!-- Stats -->
     <div class="stats-row">
         <div class="stat-item">
-            <div><span class="stat-number" data-ghost="12">12</span><span class="stat-plus">+</span></div>
-            <div class="stat-label">Org Stats/<br>Members</div>
+            <div><span class="stat-number" data-ghost="12">50</span><span class="stat-plus">+</span></div>
+            <div class="stat-label">Members</div>
         </div>
         <div class="stat-item">
-            <div><span class="stat-number" data-ghost="34">34</span><span class="stat-plus">+</span></div>
-            <div class="stat-label">Org Stats/<br>Lifetime</div>
+            <div><span class="stat-number" data-ghost="34">10</span><span class="stat-plus">+</span></div>
+            <div class="stat-label">Years Active</div>
         </div>
         <div class="stat-item">
-            <div><span class="stat-number" data-ghost="56">56</span><span class="stat-plus">+</span></div>
-            <div class="stat-label">Org Stats/<br># of Events</div>
+            <div><span class="stat-number" data-ghost="56">10</span><span class="stat-plus">+</span></div>
+            <div class="stat-label">Events</div>
         </div>
         <div class="stat-item">
-            <div><span class="stat-number" data-ghost="78">78</span><span class="stat-plus">+</span></div>
-            <div class="stat-label">Org Stats/<br>Alumni</div>
+            <div><span class="stat-number" data-ghost="78">100</span><span class="stat-plus">+</span></div>
+            <div class="stat-label">Alumni</div>
         </div>
     </div>
 </section>
