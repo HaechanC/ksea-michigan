@@ -71,7 +71,13 @@
       font-weight: 100;
       margin: 0 5px;
     }
-
+    .logo-link,
+    .logo-link:visited,
+    .logo-link:hover,
+    .logo-link:active {
+      text-decoration: none;
+      color: inherit;
+    }
     nav {
       display: flex;
       gap: 100px;
@@ -278,6 +284,7 @@
 
 <body>
   <header>
+    <a href="../main/main.html" class="logo-link">
     <div class="logo-container">
       <div class="logo-circle">
         <img src="../images/ksea_logo.jpg" alt="ksea logo" style="width: 100px; height: 100px; border-radius: 50%; object-fit: contain">
@@ -288,6 +295,7 @@
         <span class="university">University<br>of Michigan</span>
       </div>
     </div>
+    </a>
 
     <nav>
       <a href="../events/events.html">Events</a>
