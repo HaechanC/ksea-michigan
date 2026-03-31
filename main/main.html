@@ -368,16 +368,19 @@
 
         .stats-row {
             display: flex;
-            justify-content: center;
+            justify-content: space-around;  
             flex-wrap: wrap;
             position: relative;
             z-index: 2;
+            width: 100%;                    
+            max-width: 900px;               
+            margin: 0 auto;                 
         }
 
         .stat-item {
             flex: 1;
             min-width: 140px;
-            max-width: 200px;
+            max-width: 300px;              
             text-align: center;
             padding: 20px 10px;
         }
@@ -418,7 +421,42 @@
             line-height: 1.4;
         }
 
+        .mission-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 24px;
+            text-align: left;
+        }
 
+        .mission-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 16px 20px;
+            backdrop-filter: blur(4px);
+            transition: background 0.3s;
+        }
+
+        .mission-card:hover {
+            background: rgba(255, 255, 255, 0.18);
+        }
+
+        .mission-icon {
+            font-size: 28px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .mission-card p {
+            color: rgba(255, 255, 255, 0.92);
+            font-size: 15px;
+            line-height: 1.6;
+            margin: 0;
+        }
 
         /* Responsive Design */
         @media (max-width: 1024px) {
@@ -523,15 +561,24 @@
 
     <h2>About Us</h2>
 
-    <div class="about-desc">
-        <p>Established in 1971 as a non-profit organization, our club has grown to:</p>
-        <ul>
-            <li>Over 7,000 members</li>
-            <li>~70 Local Chapter and Branches</li>
-            <li>~30 Affiliated Professional Societies</li>
-            <li>13 Technical Groups</li>
-        </ul>
+<div class="about-desc">
+    <p>Established in 1971 as a non-profit organization, our mission is to:</p>
+    
+    <div class="mission-cards">
+        <div class="mission-card">
+            <div class="mission-icon">🔬</div>
+            <p>Promote the application of science and technology for the general welfare of society</p>
+        </div>
+        <div class="mission-card">
+            <div class="mission-icon">🌐</div>
+            <p>Foster international cooperation especially between the U.S. and Korea and serve Korean-American communities</p>
+        </div>
+        <div class="mission-card">
+            <div class="mission-icon">🚀</div>
+            <p>Help Korean-American Scientists and Engineers reach their career goals</p>
+        </div>
     </div>
+</div>
 
     <!-- Image Carousel -->
     <div class="photo-wrapper" style="position: relative; max-width: 620px; margin: 0 auto 60px; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.35);">
@@ -541,6 +588,9 @@
             <img src="../images/group_photo3.jpg" alt="KSEA Group hoto" style="min-width:100%; height:340px; object-fit:cover;">
             <img src="../images/group_photo4.jpg" alt="KSEA Group Photo" style="min-width:100%; height:340px; object-fit:cover;">
             <img src="../images/event.jpg" alt="KSEA event" style="min-width:100%; height:340px; object-fit:cover;">
+            <img src="../images/homepage2.jpg" alt="KSEA event" style="min-width:100%; height:340px; object-fit:cover;">
+            <img src="../images/homepage3.jpg" alt="KSEA event" style="min-width:100%; height:340px; object-fit:cover;">
+            <img src="../images/homepage4.jpg" alt="KSEA event" style="min-width:100%; height:340px; object-fit:cover;">
         </div>
 
         <!-- Prev / Next buttons -->
@@ -581,20 +631,16 @@
     <!-- Stats -->
     <div class="stats-row">
         <div class="stat-item">
-            <div><span class="stat-number" data-ghost="12">50</span><span class="stat-plus">+</span></div>
+            <div><span class="stat-number" data-ghost="7000">7000</span><span class="stat-plus">+</span></div>
             <div class="stat-label">Members</div>
         </div>
         <div class="stat-item">
-            <div><span class="stat-number" data-ghost="34">10</span><span class="stat-plus">+</span></div>
+            <div><span class="stat-number" data-ghost="51">51</span><span class="stat-plus">+</span></div>
             <div class="stat-label">Years Active</div>
         </div>
         <div class="stat-item">
-            <div><span class="stat-number" data-ghost="56">10</span><span class="stat-plus">+</span></div>
-            <div class="stat-label">Events</div>
-        </div>
-        <div class="stat-item">
-            <div><span class="stat-number" data-ghost="78">100</span><span class="stat-plus">+</span></div>
-            <div class="stat-label">Alumni</div>
+            <div><span class="stat-number" data-ghost="70">70</span><span class="stat-plus">+</span></div>
+            <div class="stat-label">Chapters</div>
         </div>
     </div>
 </section>
