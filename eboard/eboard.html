@@ -273,12 +273,125 @@
     }
 
     @media (max-width: 768px) {
-      header { flex-direction: column; gap: 20px; }
-      nav { gap: 20px; flex-wrap: wrap; justify-content: center; }
-      .page-title { font-size: 40px; text-align: center; }
-      .page-subtitle { text-align: center; margin-left: auto; margin-right: auto; }
+      /* Header */
+      header {
+        flex-direction: column;
+        padding: 16px 20px;
+        gap: 14px;
+      }
+
+      .logo-circle {
+        width: 64px;
+        height: 64px;
+      }
+
+      .logo-circle img {
+        width: 64px !important;
+        height: 64px !important;
+      }
+
+      .logo-text .ksea { font-size: 36px; }
+      .logo-text .university { font-size: 13px; }
+      .logo-text .divider { font-size: 24px; }
+
+      nav {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      nav a { font-size: 18px; }
+
+      /* Page */
+      .page {
+        padding: 36px 20px 60px;
+      }
+
+      .page-title {
+        font-size: 40px;
+        text-align: center;
+      }
+
+      .page-subtitle {
+        font-size: 15px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .section-label {
+        text-align: center;
+      }
+
       .curve-left, .curve-right { display: none; }
-      .grid { grid-template-columns: 1fr; }
+
+      /* Grid — 2 columns on mobile so cards aren't too tall */
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      /* Cards */
+      .card { border-radius: 14px; }
+
+      .headshot-wrap {
+        aspect-ratio: 3 / 4;
+      }
+
+      .card-body {
+        padding: 12px 12px 14px;
+      }
+
+      .name {
+        font-size: 16px;
+      }
+
+      .position {
+        font-size: 11px;
+        white-space: normal;
+      }
+
+      .name-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+        margin-bottom: 6px;
+      }
+
+      .meta {
+        font-size: 12px;
+        gap: 6px;
+        margin-bottom: 8px;
+      }
+
+      .pill {
+        font-size: 11px;
+        padding: 5px 8px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .logo-text .ksea { font-size: 28px; }
+      nav a { font-size: 16px; }
+      nav { gap: 14px; }
+      .page-title { font-size: 32px; }
+
+      /* Single column on very small phones */
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .headshot-wrap {
+        aspect-ratio: 4 / 3;
+      }
+
+      .name-row {
+        flex-direction: row;
+        align-items: baseline;
+      }
+
+      .name { font-size: 18px; }
+      .position { font-size: 12px; white-space: nowrap; }
     }
   </style>
 </head>

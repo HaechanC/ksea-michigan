@@ -449,24 +449,148 @@
     }
 
     @media (max-width: 768px){
-      header{ flex-direction: column; gap: 16px; }
-      nav{ gap: 20px; flex-wrap: wrap; justify-content: center; }
+      /* Header */
+      header{
+        flex-direction: column;
+        padding: 16px 20px;
+        gap: 14px;
+      }
 
-      .logo-text .ksea{ font-size: 52px; }
-      .events-title{ font-size: 72px; margin-top: 20px; }
+      .logo-circle{
+        width: 64px;
+        height: 64px;
+      }
 
-      .pill{ font-size: 18px; padding: 14px 26px; }
+      .logo-circle img{
+        width: 64px !important;
+        height: 64px !important;
+      }
+
+      .logo-text .ksea{ font-size: 36px; }
+      .logo-text .university{ font-size: 13px; }
+      .logo-text .divider{ font-size: 24px; }
+
+      nav{
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      nav a{ font-size: 18px; }
+
+      /* Page */
+      .page{ padding: 36px 20px 40px; }
+
+      /* Hero top */
+      .events-top{
+        grid-template-columns: 1fr;
+        margin-bottom: 48px;
+        gap: 24px;
+      }
+
+      /* Hide the decorative circles on mobile */
+      .events-top > div:last-child{
+        display: none;
+      }
+
+      .events-title{
+        font-size: 56px;
+        margin-top: 10px;
+        margin-bottom: 16px;
+      }
+
+      .events-links{ font-size: 15px; }
+
+      /* Filter pills */
+      .pill-row{
+        gap: 12px;
+        margin-top: 24px;
+      }
+
+      .pill{
+        font-size: 16px;
+        padding: 12px 22px;
+        border-width: 2px;
+      }
+
+      /* Upcoming band */
+      .upcoming-band{
+        margin-left: -20px;
+        margin-right: -20px;
+        padding: 60px 20px 70px;
+      }
+
+      .upcoming-band-title{ font-size: 32px; }
+
+      .upcoming-header{ height: 60px; margin-bottom: 28px; }
+
+      .upcoming-arc{ width: 320px; height: 120px; top: -20px; }
+      .upcoming-arc.bottom{ bottom: -20px; top: auto; }
 
       .upcoming-band-cards{
         grid-template-columns: 1fr;
-        gap: 22px;
-      }
-      .upcoming-arc, .upcoming-arc.bottom{
-        width: 520px;
+        gap: 16px;
       }
 
-      .event-card{ grid-template-columns: 1fr; }
-      .event-thumb{ width: 100%; height: 140px; }
+      .upcoming-band-card{
+        padding: 22px 22px;
+        border-radius: 18px;
+        min-height: auto;
+      }
+
+      .upcoming-band-card h4{ font-size: 18px; margin-bottom: 10px; }
+      .upcoming-band-card p{ font-size: 14px; }
+
+      /* Section headings */
+      .section.white{ padding: 48px 0 10px; }
+
+      .section.blue{
+        margin-left: -20px;
+        margin-right: -20px;
+        padding: 52px 20px 60px;
+      }
+
+      .section-title{ font-size: 38px; }
+
+      /* Photo grid — full width cards */
+      .photo-grid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+
+      .photo-card.light{
+        width: 100%;
+        height: 140px;
+        border-width: 3px;
+        border-radius: 14px;
+      }
+
+      /* Event cards */
+      .event-card{
+        grid-template-columns: 1fr;
+        padding: 18px 20px;
+      }
+
+      .event-card h3{ font-size: 20px; margin-bottom: 8px; }
+      .event-card p{ font-size: 14px; }
+
+      .event-thumb{ width: 100%; height: 120px; }
+
+      .grid-two{ gap: 28px; }
+
+      .under-images-text{ font-size: 13px; }
+    }
+
+    @media (max-width: 420px){
+      .logo-text .ksea{ font-size: 28px; }
+      nav a{ font-size: 16px; }
+      nav{ gap: 14px; }
+
+      .events-title{ font-size: 44px; }
+
+      .pill{ font-size: 14px; padding: 10px 18px; }
+
+      .photo-grid{ grid-template-columns: 1fr 1fr; gap: 8px; }
+      .photo-card.light{ height: 110px; }
     }
   </style>
 </head>
