@@ -264,12 +264,182 @@
       text-transform: uppercase;
     }
 
+
+    /* =========================
+       Alumni Section
+       ========================= */
+
+    .alumni-section {
+      margin-top: 80px;
+    }
+
+    .alumni-title {
+      font-size: 46px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+      color: #3F5DAE;
+    }
+
+    .alumni-intro {
+      font-size: 18px;
+      font-weight: 400;
+      opacity: 0.9;
+      max-width: 760px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .alumni-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .alumni-card {
+      min-height: 310px;
+      position: relative;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.55);
+      border: 2px solid rgba(63,93,174,0.18);
+      box-shadow: 0 12px 30px rgba(63,93,174,0.12);
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .alumni-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 40px rgba(63,93,174,0.18);
+      border-color: rgba(63,93,174,0.28);
+    }
+
+    .alumni-front {
+      min-height: 310px;
+      padding: 30px 22px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      transition: opacity 220ms ease;
+    }
+
+    .alumni-photo-wrap {
+      width: 118px;
+      height: 118px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .alumni-photo {
+      width: 118px;
+      height: 118px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      border: 3px solid rgba(63,93,174,0.18);
+      box-shadow: 0 8px 20px rgba(63,93,174,0.12);
+    }
+
+    .alumni-initials {
+      width: 118px;
+      height: 118px;
+      border-radius: 50%;
+      background: rgba(63,93,174,0.10);
+      border: 2px solid rgba(63,93,174,0.22);
+      color: #3F5DAE;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .alumni-name {
+      font-size: 22px;
+      font-weight: 900;
+      color: #3F5DAE;
+      line-height: 1.25;
+    }
+
+    .alumni-class {
+      margin-top: 7px;
+      font-size: 14px;
+      font-weight: 600;
+      color: rgba(63,93,174,0.72);
+    }
+
+    .alumni-hover-hint {
+      margin-top: 18px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.7px;
+      text-transform: uppercase;
+      color: rgba(63,93,174,0.55);
+    }
+
+    .alumni-overlay {
+      position: absolute;
+      inset: 0;
+      background: #3F5DAE;
+      color: white;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: left;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 220ms ease, transform 220ms ease;
+      pointer-events: none;
+      overflow-y: auto;
+    }
+
+    .alumni-card:hover .alumni-overlay,
+    .alumni-card:focus-within .alumni-overlay {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .alumni-overlay .alumni-overlay-name {
+      font-size: 23px;
+      font-weight: 900;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    .alumni-overlay .served-label,
+    .alumni-overlay .now-label {
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      opacity: 0.72;
+      margin-bottom: 4px;
+    }
+
+    .alumni-overlay .served {
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.45;
+      margin-bottom: 18px;
+    }
+
+    .alumni-overlay p {
+      font-size: 15px;
+      line-height: 1.6;
+      font-weight: 400;
+    }
+
     @media (max-width: 1024px) {
       header { padding: 20px 30px; }
       .page { padding: 50px 30px 70px; }
       .page-title { font-size: 52px; }
       nav { gap: 30px; }
       .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .alumni-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
 
     @media (max-width: 768px) {
@@ -321,6 +491,59 @@
 
       .section-label {
         text-align: center;
+      }
+
+      .alumni-section {
+        margin-top: 55px;
+      }
+
+      .alumni-title {
+        font-size: 36px;
+        text-align: center;
+      }
+
+      .alumni-intro {
+        font-size: 15px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .alumni-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .alumni-card,
+      .alumni-front {
+        min-height: 270px;
+      }
+
+      .alumni-photo-wrap,
+      .alumni-photo,
+      .alumni-initials {
+        width: 92px;
+        height: 92px;
+      }
+
+      .alumni-initials {
+        font-size: 25px;
+      }
+
+      .alumni-name {
+        font-size: 17px;
+      }
+
+      .alumni-overlay {
+        padding: 18px;
+      }
+
+      .alumni-overlay .alumni-overlay-name {
+        font-size: 19px;
+      }
+
+      .alumni-overlay p {
+        font-size: 13px;
       }
 
       .curve-left, .curve-right { display: none; }
@@ -381,6 +604,10 @@
         grid-template-columns: 1fr;
       }
 
+      .alumni-grid {
+        grid-template-columns: 1fr;
+      }
+
       .headshot-wrap {
         aspect-ratio: 4 / 3;
       }
@@ -393,6 +620,29 @@
       .name { font-size: 18px; }
       .position { font-size: 12px; white-space: nowrap; }
     }
+
+    @media (hover: none) {
+      .alumni-card {
+        min-height: auto;
+      }
+
+      .alumni-front {
+        min-height: 250px;
+      }
+
+      .alumni-hover-hint {
+        display: none;
+      }
+
+      .alumni-overlay {
+        position: relative;
+        opacity: 1;
+        transform: none;
+        pointer-events: auto;
+        min-height: 220px;
+      }
+    }
+
   </style>
 </head>
 
@@ -774,6 +1024,467 @@
 
 
     </div>
+
+    <!-- =========================
+         Alumni
+         ========================= -->
+    <div class="alumni-section">
+      <h2 class="alumni-title">Alumni</h2>
+      <p class="alumni-intro">
+        Meet the past leaders who helped shape KSEA Michigan! <br>
+        Learn about their time on E-Board and see what they’re up to now.
+      </p>
+<div class="alumni-grid">
+
+      <!-- Emily Kim -->
+      <div class="alumni-card" tabindex="0">
+        <div class="alumni-front">
+          <div class="alumni-photo-wrap">
+            <img
+              class="alumni-photo"
+              src="../alumni_images/Emilykim.jpeg"
+              alt="Emily Kim"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            >
+            <div class="alumni-initials" style="display:none;">EK</div>
+          </div>
+
+          <div class="alumni-name">Emily Kim</div>
+          <div class="alumni-hover-hint">Hover to learn more</div>
+        </div>
+
+        <div class="alumni-overlay">
+          <div class="alumni-overlay-name">Emily Kim</div>
+
+          <div class="served-label">KSEA E-Board</div>
+          <div class="served">
+              <span class="served-position">Vice President · 2025–2026</span><br>
+              <span class="served-position">Co-Events Coordinator · 2024–2025</span><br>
+              <span class="served-position">Freshman Representative · 2023–2024</span>
+          </div>
+
+          <div class="now-label">Where are they now?</div>
+          <p>BS in Public Health Sciences.</p>
+        </div>
+      </div>
+
+      <!-- Emma Kim -->
+      <div class="alumni-card" tabindex="0">
+        <div class="alumni-front">
+          <div class="alumni-photo-wrap">
+            <img
+              class="alumni-photo"
+              src="../alumni/Emma.jpeg"
+              alt="Emma Kim"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            >
+            <div class="alumni-initials" style="display:none;">EK</div>
+          </div>
+
+          <div class="alumni-name">Emma Kim</div>
+          <div class="alumni-hover-hint">Hover to learn more</div>
+        </div>
+
+        <div class="alumni-overlay">
+          <div class="alumni-overlay-name">Emma Kim</div>
+
+          <div class="served-label">KSEA E-Board</div>
+          <div class="served">
+              <span class="served-position">Senior Co-Advisor · 2025–2026</span><br>
+              <span class="served-position">Secretary · 2024–2025</span><br>
+              <span class="served-position">Fundraiser Chair · 2023–2024</span>
+          </div>
+
+          <div class="now-label">Where are they now?</div>
+          <p>Applying to medical schools, working as a personal trainer, and training for Detroit’s international half marathon!</p>
+        </div>
+      </div>
+
+      <!-- Eugene Chung -->
+      <div class="alumni-card" tabindex="0">
+        <div class="alumni-front">
+          <div class="alumni-photo-wrap">
+            <img
+              class="alumni-photo"
+              src="../alumni_images/eugenechung.jpeg"
+              alt="Eugene Chung"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            >
+            <div class="alumni-initials" style="display:none;">EC</div>
+          </div>
+
+          <div class="alumni-name">Eugene Chung</div>
+          <div class="alumni-hover-hint">Hover to learn more</div>
+        </div>
+
+        <div class="alumni-overlay">
+          <div class="alumni-overlay-name">Eugene Chung</div>
+
+          <div class="served-label">KSEA E-Board</div>
+          <div class="served">
+              <span class="served-position">Treasurer · 2025–2026</span><br>
+              <span class="served-position">Treasurer · 2024–2025</span><br>
+              <span class="served-position">Co-Marketing Chair · 2023–2024</span>
+          </div>
+
+          <div class="now-label">Where are they now?</div>
+          <p>Gap year as a Research Assistant.</p>
+        </div>
+      </div>
+
+      <!-- Sarah Chang -->
+      <div class="alumni-card" tabindex="0">
+        <div class="alumni-front">
+          <div class="alumni-photo-wrap">
+            <img
+              class="alumni-photo"
+              src="../alumni_images/sarah.jpeg"
+              alt="Sarah Chang"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            >
+            <div class="alumni-initials" style="display:none;">SC</div>
+          </div>
+
+          <div class="alumni-name">Sarah Chang</div>
+          <div class="alumni-hover-hint">Hover to learn more</div>
+        </div>
+
+        <div class="alumni-overlay">
+          <div class="alumni-overlay-name">Sarah Chang</div>
+
+          <div class="served-label">KSEA E-Board</div>
+          <div class="served">
+              <span class="served-position">Senior Advisor · 2025–2026</span><br>
+              <span class="served-position">Marketing Chair · 2024–2025</span><br>
+              <span class="served-position">Marketing Chair · 2023–2024</span>
+          </div>
+
+          <div class="now-label">Where are they now?</div>
+          <p>Dental school at Harvard.</p>
+        </div>
+      </div>
+
+      <!-- Minjun An -->
+      <div class="alumni-card" tabindex="0">
+        <div class="alumni-front">
+          <div class="alumni-photo-wrap">
+            <img
+              class="alumni-photo"
+              src="../alumni_images/minjunan.jpeg"
+              alt="Minjun An"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            >
+            <div class="alumni-initials" style="display:none;">MA</div>
+          </div>
+
+          <div class="alumni-name">Minjun An</div>
+          <div class="alumni-hover-hint">Hover to learn more</div>
+        </div>
+
+        <div class="alumni-overlay">
+          <div class="alumni-overlay-name">Minjun An</div>
+
+          <div class="served-label">KSEA E-Board</div>
+          <div class="served">
+              <span class="served-position">President · 2024–2025</span><br>
+              <span class="served-position">Event Coordinator · 2023–2024</span><br>
+              <span class="served-position">Freshman Representative · 2022–2023</span>
+          </div>
+
+          <div class="now-label">Where are they now?</div>
+          <p>First Year Medical Student at Cleveland Clinic Lerner College of Medicine!</p>
+        </div>
+      </div>
+
+      <!-- Brian Seo -->
+      <div class="alumni-card" tabindex="0">
+        <div class="alumni-front">
+          <div class="alumni-photo-wrap">
+            <img
+              class="alumni-photo"
+              src="../alumni_images/brian.jpeg"
+              alt="Brian Seo"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            >
+            <div class="alumni-initials" style="display:none;">BS</div>
+          </div>
+
+          <div class="alumni-name">Brian Seo</div>
+          <div class="alumni-hover-hint">Hover to learn more</div>
+        </div>
+
+        <div class="alumni-overlay">
+          <div class="alumni-overlay-name">Brian Seo</div>
+
+          <div class="served-label">KSEA E-Board</div>
+          <div class="served">
+              <span class="served-position">Senior Advisor · 2024–2025</span><br>
+              <span class="served-position">Vice President · 2023–2024</span><br>
+              <span class="served-position">Event Coordinator · 2022–2023</span><br>
+              <span class="served-position">Freshman Representative · 2021–2022</span>
+          </div>
+
+          <div class="now-label">Where are they now?</div>
+          <p>Medical Student at Wayne State University School of Medicine.</p>
+        </div>
+      </div>
+
+      <!-- Izzy Yoon -->
+      <div class="alumni-card" tabindex="0">
+        <div class="alumni-front">
+          <div class="alumni-photo-wrap">
+            <img
+              class="alumni-photo"
+              src="../alumni_images/isabellayoon.jpeg"
+              alt="Izzy Yoon"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            >
+            <div class="alumni-initials" style="display:none;">IY</div>
+          </div>
+
+          <div class="alumni-name">Izzy Yoon</div>
+          <div class="alumni-hover-hint">Hover to learn more</div>
+        </div>
+
+        <div class="alumni-overlay">
+          <div class="alumni-overlay-name">Izzy Yoon</div>
+
+          <div class="served-label">KSEA E-Board</div>
+          <div class="served">
+              <span class="served-position">Vice President · 2024–2025</span><br>
+              <span class="served-position">Secretary · 2023–2024</span><br>
+              <span class="served-position">Marketing · 2022–2023</span><br>
+              <span class="served-position">Freshman Representative · 2021–2022</span>
+          </div>
+
+          <div class="now-label">Where are they now?</div>
+          <p>Working as a front end developer for JB Mobility!</p>
+        </div>
+      </div>
+
+      <!-- Michael Chawoong Koo -->
+      <div class="alumni-card" tabindex="0">
+        <div class="alumni-front">
+          <div class="alumni-photo-wrap">
+            <img
+              class="alumni-photo"
+              src="../alumni_images/michaelkoo.png"
+              alt="Michael Chawoong Koo"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            >
+            <div class="alumni-initials" style="display:none;">MK</div>
+          </div>
+
+          <div class="alumni-name">Michael Chawoong Koo</div>
+          <div class="alumni-hover-hint">Hover to learn more</div>
+        </div>
+
+        <div class="alumni-overlay">
+          <div class="alumni-overlay-name">Michael Chawoong Koo</div>
+
+          <div class="served-label">KSEA E-Board</div>
+          <div class="served">
+              <span class="served-position">Director of Community Engagement · 2022–2025</span>
+          </div>
+
+          <div class="now-label">Where are they now?</div>
+          <p>AI Engineer.</p>
+        </div>
+      </div>
+
+      <!-- Michelle Siyeon Baek -->
+      <div class="alumni-card" tabindex="0">
+        <div class="alumni-front">
+          <div class="alumni-photo-wrap">
+            <img
+              class="alumni-photo"
+              src="../alumni_images/michellebaek.jpeg"
+              alt="Michelle Siyeon Baek"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            >
+            <div class="alumni-initials" style="display:none;">MB</div>
+          </div>
+
+          <div class="alumni-name">Michelle Siyeon Baek</div>
+          <div class="alumni-hover-hint">Hover to learn more</div>
+        </div>
+
+        <div class="alumni-overlay">
+          <div class="alumni-overlay-name">Michelle Siyeon Baek</div>
+
+          <div class="served-label">KSEA E-Board</div>
+          <div class="served">
+              <span class="served-position">President · 2023–2024</span><br>
+              <span class="served-position">Secretary · 2022–2023</span><br>
+              <span class="served-position">Marketing Chair · 2021–2022</span><br>
+              <span class="served-position">Freshman Representative · 2020–2021</span>
+          </div>
+
+          <div class="now-label">Where are they now?</div>
+          <p>Heading to medical school this August at Michigan State University College of Human Medicine.</p>
+        </div>
+      </div>
+
+      <!-- Elina Kang -->
+      <div class="alumni-card" tabindex="0">
+        <div class="alumni-front">
+          <div class="alumni-photo-wrap">
+            <img
+              class="alumni-photo"
+              src="../eboard_images/Elina.jpeg"
+              alt="Elina Kang"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            >
+            <div class="alumni-initials" style="display:none;">EK</div>
+          </div>
+
+          <div class="alumni-name">Elina Kang</div>
+          <div class="alumni-hover-hint">Hover to learn more</div>
+        </div>
+
+        <div class="alumni-overlay">
+          <div class="alumni-overlay-name">Elina Kang</div>
+
+          <div class="served-label">KSEA E-Board</div>
+          <div class="served">
+              <span class="served-position">Treasurer · 2022–2023</span><br>
+              <span class="served-position">Secretary · 2021–2022</span>
+          </div>
+
+          <div class="now-label">Where are they now?</div>
+          <p>Corporate finance in San Francisco.</p>
+        </div>
+      </div>
+
+      <!-- Madeleine (Lena) Lee -->
+      <div class="alumni-card" tabindex="0">
+        <div class="alumni-front">
+          <div class="alumni-photo-wrap">
+            <img
+              class="alumni-photo"
+              src="../alumni_images/madeleinelee.jpg"
+              alt="Madeleine (Lena) Lee"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            >
+            <div class="alumni-initials" style="display:none;">ML</div>
+          </div>
+
+          <div class="alumni-name">Madeleine (Lena) Lee</div>
+          <div class="alumni-hover-hint">Hover to learn more</div>
+        </div>
+
+        <div class="alumni-overlay">
+          <div class="alumni-overlay-name">Madeleine (Lena) Lee</div>
+
+          <div class="served-label">KSEA E-Board</div>
+          <div class="served">
+              <span class="served-position">Senior Advisor · 2022–2023</span><br>
+              <span class="served-position">President · 2021–2022</span><br>
+              <span class="served-position">Secretary · 2020–2021</span>
+          </div>
+
+          <div class="now-label">Where are they now?</div>
+          <p>I'm a medical student at the University of Michigan.</p>
+        </div>
+      </div>
+
+      <!-- Sean Lee -->
+      <div class="alumni-card" tabindex="0">
+        <div class="alumni-front">
+          <div class="alumni-photo-wrap">
+            <img
+              class="alumni-photo"
+              src="../alumni_images/seanlee.png"
+              alt="Sean Lee"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            >
+            <div class="alumni-initials" style="display:none;">SL</div>
+          </div>
+
+          <div class="alumni-name">Sean Lee</div>
+          <div class="alumni-hover-hint">Hover to learn more</div>
+        </div>
+
+        <div class="alumni-overlay">
+          <div class="alumni-overlay-name">Sean Lee</div>
+
+          <div class="served-label">KSEA E-Board</div>
+          <div class="served">
+              <span class="served-position">Senior Advisor · 2021–2022</span><br>
+              <span class="served-position">President · 2020–2021</span><br>
+              <span class="served-position">Event Coordinator · 2019–2020</span>
+          </div>
+
+          <div class="now-label">Where are they now?</div>
+          <p>Mechanical engineer at Daifuku designing conveyor belt systems for airport baggage handling systems across the US.</p>
+        </div>
+      </div>
+
+      <!-- Austin Kim -->
+      <div class="alumni-card" tabindex="0">
+        <div class="alumni-front">
+          <div class="alumni-photo-wrap">
+            <img
+              class="alumni-photo"
+              src="../eboard_images/Austin.jpeg"
+              alt="Austin Kim"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            >
+            <div class="alumni-initials" style="display:none;">AK</div>
+          </div>
+
+          <div class="alumni-name">Austin Kim</div>
+          <div class="alumni-hover-hint">Hover to learn more</div>
+        </div>
+
+        <div class="alumni-overlay">
+          <div class="alumni-overlay-name">Austin Kim</div>
+
+          <div class="served-label">KSEA E-Board</div>
+          <div class="served">
+              <span class="served-position">Academic Chair · 2021–2022</span><br>
+              <span class="served-position">Event Coordinator · 2020–2021</span>
+          </div>
+
+          <div class="now-label">Where are they now?</div>
+          <p>I worked in an emergency department as a medical scribe after graduating, and now I’ll be starting medical school this year at NYITCOM.</p>
+        </div>
+      </div>
+
+      <!-- Hojin Han -->
+      <div class="alumni-card" tabindex="0">
+        <div class="alumni-front">
+          <div class="alumni-photo-wrap">
+            <img
+              class="alumni-photo"
+              src="../eboard_images/Hojin.jpeg"
+              alt="Hojin Han"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            >
+            <div class="alumni-initials" style="display:none;">HH</div>
+          </div>
+
+          <div class="alumni-name">Hojin Han</div>
+          <div class="alumni-hover-hint">Hover to learn more</div>
+        </div>
+
+        <div class="alumni-overlay">
+          <div class="alumni-overlay-name">Hojin Han</div>
+
+          <div class="served-label">KSEA E-Board</div>
+          <div class="served">
+              <span class="served-position">Senior Advisor · 2019–2021</span><br>
+              <span class="served-position">Event Coordinator · 2018–2019</span>
+          </div>
+
+          <div class="now-label">Where are they now?</div>
+          <p>I am a lawyer working on tech-related litigation.</p>
+        </div>
+      </div>
+
+      </div>
+    </div>
+
   </section>
 </body>
 </html>
