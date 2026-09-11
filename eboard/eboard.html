@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -272,6 +272,48 @@
       color: rgba(63,93,174,0.9);
       margin: 26px 0 12px;
       text-transform: uppercase;
+    }
+
+    /* =========================
+       Board / Alumni page nav
+       ========================= */
+
+    .board-nav {
+      margin-top: 70px;
+      padding-top: 28px;
+      border-top: 2px solid rgba(63,93,174,0.15);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .board-nav a {
+      text-decoration: none;
+      color: #3F5DAE;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 10px 22px;
+      border-radius: 999px;
+      border: 2px solid rgba(63,93,174,0.25);
+      background: rgba(63,93,174,0.06);
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .board-nav a:hover {
+      background: rgba(63,93,174,0.15);
+      border-color: rgba(63,93,174,0.4);
+    }
+
+    .board-nav a.active {
+      background: #3F5DAE;
+      color: white;
+      border-color: #3F5DAE;
+    }
+
+    @media (max-width: 768px) {
+      .board-nav { margin-top: 45px; }
+      .board-nav a { font-size: 13px; padding: 9px 16px; }
     }
 
 
@@ -697,7 +739,7 @@
       <!-- President -->
       <div class="card">
         <div class="headshot-wrap">
-          <img class="headshot-front" src="../eboard_images/Yejun26Prof.jpg" alt="headshot" style="object-position: 50% 12%;" onerror="this.onerror=null; this.src='../eboard_images/placeholder.jpg'">
+          <img class="headshot-front" src="../eboard_images/Yejun26Prof.jpg" alt="headshot" style="object-position: 50% 30%;" onerror="this.onerror=null; this.src='../eboard_images/placeholder.jpg'">
           <img class="headshot-back" src="../eboard_images/Yejun26S.jpg" alt="fun photo" style="object-position: 50% 12%;" onerror="this.onerror=null; this.src='../eboard_images/placeholder.jpg'">
         </div>
         <div class="card-body">
@@ -795,7 +837,7 @@
       <!-- Senior Advisor -->
       <div class="card">
         <div class="headshot-wrap">
-          <img class="headshot-front" src="../eboard_images/Katie26Prof.png" alt="headshot" style="object-position: 50% 15%;" onerror="this.onerror=null; this.src='../eboard_images/placeholder.jpg'">
+          <img class="headshot-front" src="../eboard_images/Katie26Prof.png" alt="headshot" style="object-position: 50% 32%;" onerror="this.onerror=null; this.src='../eboard_images/placeholder.jpg'">
           <img class="headshot-back" src="../eboard_images/Katie26S.jpg" alt="fun photo" style="object-position: 50% 60%;" onerror="this.onerror=null; this.src='../eboard_images/placeholder.jpg'">
         </div>
         <div class="card-body">
@@ -819,7 +861,7 @@
       <!-- Secretary -->
       <div class="card">
         <div class="headshot-wrap">
-          <img class="headshot-front" src="../eboard_images/Eva26Prof.jpg" alt="headshot" style="object-position: 50% 15%;" onerror="this.onerror=null; this.src='../eboard_images/placeholder.jpg'">
+          <img class="headshot-front" src="../eboard_images/Eva26Prof.jpg" alt="headshot" style="object-position: 50% 32%;" onerror="this.onerror=null; this.src='../eboard_images/placeholder.jpg'">
           <img class="headshot-back" src="../eboard_images/Eva26S.jpg" alt="fun photo" style="object-position: 50% 42%;" onerror="this.onerror=null; this.src='../eboard_images/placeholder.jpg'">
         </div>
         <div class="card-body">
@@ -990,7 +1032,7 @@
       <!-- Internal Chair -->
       <div class="card">
         <div class="headshot-wrap">
-          <img class="headshot-front" src="../eboard_images/Ben25Prof.png" alt="headshot" onerror="this.onerror=null; this.src='../eboard_images/placeholder.jpg'">
+          <img class="headshot-front" src="../eboard_images/Ben26Prof.png" alt="headshot" style="object-position: 50% 45%;" onerror="this.onerror=null; this.src='../eboard_images/placeholder.jpg'">
           <img class="headshot-back" src="../eboard_images/Ben25S.png" alt="fun photo" onerror="this.onerror=null; this.src='../eboard_images/placeholder.jpg'">
         </div>
         <div class="card-body">
@@ -1014,815 +1056,11 @@
       </div>
     </div>
 
-    <!-- =========================
-         KSEA E-Board 2025-2026
-         ========================= -->
-    <div class="section-label">KSEA EBOARD 2025-2026</div>
-
-    <div class="grid">
-      <div class="card">
-        <div class="headshot-wrap">
-          <img class="headshot-front" src="../eboard_images/Ashley25Prof.jpg" alt="headshot" onerror="this.onerror=null; this.src='../eboard_images/placeholder.jpg'">
-          <img class="headshot-back" src="../eboard_images/Ashley25S.png" alt="fun photo" onerror="this.onerror=null; this.src='../eboard_images/placeholder.jpg'">
-        </div>
-        <div class="card-body">
-          <div class="name-row">
-            <div class="name">Ashley Jung</div>
-            <div class="position">President</div>
-          </div>
-          <div class="meta">
-            <span>MCDB</span>
-            <span class="dot">•</span>
-            <span>Junior</span>
-          </div>
-          <div class="hobbies">
-            <span class="pill">Playing Tennis</span>
-            <span class="pill">Doing Nails</span>
-            <span class="pill">Watching Movies</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="headshot-wrap">
-          <img class="headshot-front" src="../eboard_images/Emily25Prof.jpg" alt="headshot" onerror="this.onerror=null; this.src='../eboard_images/placeholder.jpg'">
-          <img class="headshot-back" src="../eboard_images/Emily25S.jpg" alt="fun photo" onerror="this.onerror=null; this.src='../eboard_images/placeholder.jpg'">
-        </div>
-        <div class="card-body">
-          <div class="name-row">
-            <div class="name">Emily Kim</div>
-            <div class="position">Vice President</div>
-          </div>
-          <div class="meta">
-            <span>Public Health</span>
-            <span class="dot">•</span>
-            <span>Junior</span>
-          </div>
-          <div class="hobbies">
-            <span class="pill">Soccer</span>
-            <span class="pill">Pilates</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="headshot-wrap">
-          <img class="headshot-front" src="../eboard_images/Eugene25Prof.png" alt="headshot" onerror="this.onerror=null; this.src='../eboard_images/placeholder.jpg'">
-        </div>
-        <div class="card-body">
-          <div class="name-row">
-            <div class="name">Eugene Chung</div>
-            <div class="position">Treasurer</div>
-          </div>
-          <div class="meta">
-            <span>Biology, Health, and Society + Gender & Health</span>
-            <span class="dot">•</span>
-            <span>Senior</span>
-          </div>
-          <div class="hobbies">
-            <span class="pill">Gym</span>
-            <span class="pill">Gel-X Nails</span>
-            <span class="pill">Tennis</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="headshot-wrap">
-          <img class="headshot-front" src="../eboard_images/SC25Prof.png" alt="headshot" onerror="this.onerror=null; this.src='../eboard_images/placeholder.jpg'">
-        </div>
-        <div class="card-body">
-          <div class="name-row">
-            <div class="name">Sarah Chang</div>
-            <div class="position">Senior Advisor</div>
-          </div>
-          <div class="meta">
-            <span>Biomolecular Science</span>
-            <span class="dot">•</span>
-            <span>Senior</span>
-          </div>
-          <div class="hobbies">
-            <span class="pill">Reading</span>
-            <span class="pill">Taking Photos & Videos</span>
-            <span class="pill">Going on Walks</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="headshot-wrap">
-          <img class="headshot-front" src="../eboard_images/Emma25Prof.jpg" alt="headshot" onerror="this.onerror=null; this.src='../eboard_images/placeholder.jpg'">
-          <img class="headshot-back" src="../eboard_images/Emma25S.jpg" alt="fun photo" onerror="this.onerror=null; this.src='../eboard_images/placeholder.jpg'">
-        </div>
-        <div class="card-body">
-          <div class="name-row">
-            <div class="name">Emma Kim</div>
-            <div class="position">Senior Advisor</div>
-          </div>
-          <div class="meta">
-            <span>MCDB</span>
-            <span class="dot">•</span>
-            <span>Senior</span>
-          </div>
-          <div class="hobbies">
-            <span class="pill">Running</span>
-            <span class="pill">Baking</span>
-            <span class="pill">Photography</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="headshot-wrap">
-          <img class="headshot-front" src="../eboard_images/Yejun25Prof.jpg" alt="headshot" onerror="this.onerror=null; this.src='../eboard_images/placeholder.jpg'">
-          <img class="headshot-back" src="../eboard_images/Yejun25S.jpg" alt="fun photo" onerror="this.onerror=null; this.src='../eboard_images/placeholder.jpg'">
-        </div>
-        <div class="card-body">
-          <div class="name-row">
-            <div class="name">Yejun Lee</div>
-            <div class="position">Secretary</div>
-          </div>
-          <div class="meta">
-            <span>Biology</span>
-            <span class="dot">•</span>
-            <span>Sophomore</span>
-          </div>
-          <div class="hobbies">
-            <span class="pill">Sports</span>
-            <span class="pill">Traveling</span>
-            <span class="pill">Listening to and Playing Music</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="headshot-wrap">
-          <img class="headshot-front" src="../eboard_images/Daniel25Prof.jpg" alt="headshot" onerror="this.onerror=null; this.src='../eboard_images/placeholder.jpg'">
-          <img class="headshot-back" src="../eboard_images/Daniel25S.jpg" alt="fun photo" onerror="this.onerror=null; this.src='../eboard_images/placeholder.jpg'">
-        </div>
-        <div class="card-body">
-          <div class="name-row">
-            <div class="name">Daniel Lee</div>
-            <div class="position">Event Coordinator</div>
-          </div>
-          <div class="meta">
-            <span>Philosophy, Politics, & Economics</span>
-            <span class="dot">•</span>
-            <span>Sophomore</span>
-          </div>
-          <div class="hobbies">
-            <span class="pill">Philly Sports</span>
-            <span class="pill">Reading (Dystopian Books)</span>
-            <span class="pill">DJing</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="headshot-wrap">
-          <img class="headshot-front" src="../eboard_images/Ben25Prof.png" alt="headshot" onerror="this.onerror=null; this.src='../eboard_images/placeholder.jpg'">
-          <img class="headshot-back" src="../eboard_images/Ben25S.png" alt="fun photo" onerror="this.onerror=null; this.src='../eboard_images/placeholder.jpg'">
-        </div>
-        <div class="card-body">
-          <div class="name-row">
-            <div class="name">Benjamin Ko</div>
-            <div class="position">Event Coordinator</div>
-          </div>
-          <div class="meta">
-            <span>Computer Engineering</span>
-            <span class="dot">•</span>
-            <span>Sophomore</span>
-          </div>
-          <div class="hobbies">
-            <span class="pill">Lifting</span>
-            <span class="pill">Tennis/Pickleball</span>
-            <span class="pill">Valorant</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="headshot-wrap">
-          <img class="headshot-front" src="../eboard_images/Katie25Prof.jpg" alt="headshot" onerror="this.onerror=null; this.src='../eboard_images/placeholder.jpg'">
-          <img class="headshot-back" src="../eboard_images/Katie25S.jpg" alt="fun photo" onerror="this.onerror=null; this.src='../eboard_images/placeholder.jpg'">
-        </div>
-        <div class="card-body">
-          <div class="name-row">
-            <div class="name">Katie Lee</div>
-            <div class="position">Marketing Chair</div>
-          </div>
-          <div class="meta">
-            <span>Computer Science</span>
-            <span class="dot">•</span>
-            <span>Junior</span>
-          </div>
-          <div class="hobbies">
-            <span class="pill">Baking</span>
-            <span class="pill">Crocheting</span>
-            <span class="pill">Learning New Instruments</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="headshot-wrap">
-          <img class="headshot-front" src="../eboard_images/SK25Prof.jpg" alt="headshot" onerror="this.onerror=null; this.src='../eboard_images/placeholder.jpg'">
-          <img class="headshot-back" src="../eboard_images/SK25S.jpg" alt="fun photo" onerror="this.onerror=null; this.src='../eboard_images/placeholder.jpg'">
-        </div>
-        <div class="card-body">
-          <div class="name-row">
-            <div class="name">Sarah Kim</div>
-            <div class="position">Marketing Chair</div>
-          </div>
-          <div class="meta">
-            <span>Neuroscience</span>
-            <span class="dot">•</span>
-            <span>Junior</span>
-          </div>
-          <div class="hobbies">
-            <span class="pill">Dancing</span>
-            <span class="pill">Traveling</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="headshot-wrap">
-          <img class="headshot-front" src="../eboard_images/Jihoon25Prof.jpg" alt="headshot" onerror="this.onerror=null; this.src='../eboard_images/placeholder.jpg'">
-          <img class="headshot-back" src="../eboard_images/Jihoon25S.jpg" alt="fun photo" onerror="this.onerror=null; this.src='../eboard_images/placeholder.jpg'">
-        </div>
-        <div class="card-body">
-          <div class="name-row">
-            <div class="name">Daniel Lee</div>
-            <div class="position">Director of Community Engagement</div>
-          </div>
-          <div class="meta">
-            <span>Neuroscience</span>
-            <span class="dot">•</span>
-            <span>Junior</span>
-          </div>
-          <div class="hobbies">
-            <span class="pill">Bouldering</span>
-            <span class="pill">Poker</span>
-            <span class="pill">Soccer</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="headshot-wrap">
-          <img class="headshot-front" src="../eboard_images/Char25Prof.jpg" alt="headshot" onerror="this.onerror=null; this.src='../eboard_images/placeholder.jpg'">
-          <img class="headshot-back" src="../eboard_images/Char25S.jpg" alt="fun photo" onerror="this.onerror=null; this.src='../eboard_images/placeholder.jpg'">
-        </div>
-        <div class="card-body">
-          <div class="name-row">
-            <div class="name">Charlotte Jen</div>
-            <div class="position">Public Relations Chair</div>
-          </div>
-          <div class="meta">
-            <span>Computer Science and Economics</span>
-            <span class="dot">•</span>
-            <span>Sophomore</span>
-          </div>
-          <div class="hobbies">
-            <span class="pill">Cooking and Baking</span>
-            <span class="pill">Exercising</span>
-            <span class="pill">Golf</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="headshot-wrap">
-          <img class="headshot-front" src="../eboard_images/Haechan25Prof.jpg" alt="headshot" onerror="this.onerror=null; this.src='../eboard_images/placeholder.jpg'">
-          <img class="headshot-back" src="../eboard_images/Haechan25S.jpg" alt="fun photo" onerror="this.onerror=null; this.src='../eboard_images/placeholder.jpg'">
-        </div>
-        <div class="card-body">
-          <div class="name-row">
-            <div class="name">Haechan Chung</div>
-            <div class="position">Fundraising Chair</div>
-          </div>
-          <div class="meta">
-            <span>Data Science</span>
-            <span class="dot">•</span>
-            <span>Sophomore</span>
-          </div>
-          <div class="hobbies">
-            <span class="pill">LeBron Fan</span>
-            <span class="pill">Basketball</span>
-            <span class="pill">Lifting</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="headshot-wrap">
-          <img class="headshot-front" src="../eboard_images/Eva25Prof.jpg" alt="headshot" onerror="this.onerror=null; this.src='../eboard_images/placeholder.jpg'">
-          <img class="headshot-back" src="../eboard_images/Eva25S.jpg" alt="fun photo" onerror="this.onerror=null; this.src='../eboard_images/placeholder.jpg'">
-        </div>
-        <div class="card-body">
-          <div class="name-row">
-            <div class="name">Eva Choi</div>
-            <div class="position">Freshman Representative</div>
-          </div>
-          <div class="meta">
-            <span>Neuroscience</span>
-            <span class="dot">•</span>
-            <span>Freshman</span>
-          </div>
-          <div class="hobbies">
-            <span class="pill">Knitting</span>
-            <span class="pill">Crafting</span>
-            <span class="pill">Playing the Violin</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="headshot-wrap">
-          <img class="headshot-front" src="../eboard_images/Leo25Prof.jpg" alt="headshot" onerror="this.onerror=null; this.src='../eboard_images/placeholder.jpg'">
-          <img class="headshot-back" src="../eboard_images/Leo25S.jpg" alt="fun photo" onerror="this.onerror=null; this.src='../eboard_images/placeholder.jpg'">
-        </div>
-        <div class="card-body">
-          <div class="name-row">
-            <div class="name">Leo Kim</div>
-            <div class="position">Freshman Representative</div>
-          </div>
-          <div class="meta">
-            <span>Movement Science</span>
-            <span class="dot">•</span>
-            <span>Freshman</span>
-          </div>
-          <div class="hobbies">
-            <span class="pill">Running/Lifting</span>
-            <span class="pill">Detroit Sports</span>
-            <span class="pill">Drawing</span>
-          </div>
-        </div>
-      </div>
-
-
-    </div>
-
-    <!-- =========================
-         Alumni
-         ========================= -->
-    <div class="alumni-section">
-      <h2 class="alumni-title">Alumni</h2>
-      <p class="alumni-intro">
-        Meet the past leaders who helped shape KSEA Michigan! <br>
-        Learn about their time on E-Board and see what they’re up to now.
-      </p>
-<div class="alumni-grid">
-
-      <!-- Emily Kim -->
-      <div class="alumni-card" tabindex="0">
-        <div class="alumni-front">
-          <div class="alumni-photo-wrap">
-            <img
-              class="alumni-photo"
-              src="../alumni_images/emilykim.jpeg"
-              alt="Emily Kim"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-            >
-            <div class="alumni-initials" style="display:none;">EK</div>
-          </div>
-
-          <div class="alumni-name">Emily Kim</div>
-          <div class="alumni-hover-hint">Hover to learn more</div>
-        </div>
-
-        <div class="alumni-overlay">
-          <div class="alumni-overlay-name">Emily Kim</div>
-
-          <div class="served-label">KSEA E-Board</div>
-          <div class="served">
-              <span class="served-position">Vice President · 2025–2026</span><br>
-              <span class="served-position">Co-Events Coordinator · 2024–2025</span><br>
-              <span class="served-position">Freshman Representative · 2023–2024</span>
-          </div>
-
-          <div class="now-label">Where are they now?</div>
-          <p>BS in Public Health Sciences.</p>
-        </div>
-      </div>
-
-      <!-- Emma Kim -->
-      <div class="alumni-card" tabindex="0">
-        <div class="alumni-front">
-          <div class="alumni-photo-wrap">
-            <img
-              class="alumni-photo"
-              src="../alumni/Emma.jpeg"
-              alt="Emma Kim"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-            >
-            <div class="alumni-initials" style="display:none;">EK</div>
-          </div>
-
-          <div class="alumni-name">Emma Kim</div>
-          <div class="alumni-hover-hint">Hover to learn more</div>
-        </div>
-
-        <div class="alumni-overlay">
-          <div class="alumni-overlay-name">Emma Kim</div>
-
-          <div class="served-label">KSEA E-Board</div>
-          <div class="served">
-              <span class="served-position">Senior Co-Advisor · 2025–2026</span><br>
-              <span class="served-position">Secretary · 2024–2025</span><br>
-              <span class="served-position">Fundraiser Chair · 2023–2024</span>
-          </div>
-
-          <div class="now-label">Where are they now?</div>
-          <p>Applying to medical schools, working as a personal trainer, and training for Detroit’s international half marathon.</p>
-        </div>
-      </div>
-
-      <!-- Eugene Chung -->
-      <div class="alumni-card" tabindex="0">
-        <div class="alumni-front">
-          <div class="alumni-photo-wrap">
-            <img
-              class="alumni-photo"
-              src="../alumni_images/eugenechung.jpeg"
-              alt="Eugene Chung"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-            >
-            <div class="alumni-initials" style="display:none;">EC</div>
-          </div>
-
-          <div class="alumni-name">Eugene Chung</div>
-          <div class="alumni-hover-hint">Hover to learn more</div>
-        </div>
-
-        <div class="alumni-overlay">
-          <div class="alumni-overlay-name">Eugene Chung</div>
-
-          <div class="served-label">KSEA E-Board</div>
-          <div class="served">
-              <span class="served-position">Treasurer · 2025–2026</span><br>
-              <span class="served-position">Treasurer · 2024–2025</span><br>
-              <span class="served-position">Co-Marketing Chair · 2023–2024</span>
-          </div>
-
-          <div class="now-label">Where are they now?</div>
-          <p>Gap year as a Research Assistant.</p>
-        </div>
-      </div>
-
-      <!-- Sarah Chang -->
-      <div class="alumni-card" tabindex="0">
-        <div class="alumni-front">
-          <div class="alumni-photo-wrap">
-            <img
-              class="alumni-photo"
-              src="../alumni_images/sarah.jpeg"
-              alt="Sarah Chang"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-            >
-            <div class="alumni-initials" style="display:none;">SC</div>
-          </div>
-
-          <div class="alumni-name">Sarah Chang</div>
-          <div class="alumni-hover-hint">Hover to learn more</div>
-        </div>
-
-        <div class="alumni-overlay">
-          <div class="alumni-overlay-name">Sarah Chang</div>
-
-          <div class="served-label">KSEA E-Board</div>
-          <div class="served">
-              <span class="served-position">Senior Advisor · 2025–2026</span><br>
-              <span class="served-position">Marketing Chair · 2024–2025</span><br>
-              <span class="served-position">Marketing Chair · 2023–2024</span>
-          </div>
-
-          <div class="now-label">Where are they now?</div>
-          <p>Dental school at Harvard.</p>
-        </div>
-      </div>
-
-      <!-- Minjun An -->
-      <div class="alumni-card" tabindex="0">
-        <div class="alumni-front">
-          <div class="alumni-photo-wrap">
-            <img
-              class="alumni-photo"
-              src="../alumni_images/minjunan.jpeg"
-              alt="Minjun An"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-            >
-            <div class="alumni-initials" style="display:none;">MA</div>
-          </div>
-
-          <div class="alumni-name">Minjun An</div>
-          <div class="alumni-hover-hint">Hover to learn more</div>
-        </div>
-
-        <div class="alumni-overlay">
-          <div class="alumni-overlay-name">Minjun An</div>
-
-          <div class="served-label">KSEA E-Board</div>
-          <div class="served">
-              <span class="served-position">President · 2024–2025</span><br>
-              <span class="served-position">Event Coordinator · 2023–2024</span><br>
-              <span class="served-position">Freshman Representative · 2022–2023</span>
-          </div>
-
-          <div class="now-label">Where are they now?</div>
-          <p>First Year Medical Student at Cleveland Clinic Lerner College of Medicine.</p>
-        </div>
-      </div>
-
-      <!-- Brian Seo -->
-      <div class="alumni-card" tabindex="0">
-        <div class="alumni-front">
-          <div class="alumni-photo-wrap">
-            <img
-              class="alumni-photo"
-              src="../alumni_images/brian.jpeg"
-              alt="Brian Seo"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-            >
-            <div class="alumni-initials" style="display:none;">BS</div>
-          </div>
-
-          <div class="alumni-name">Brian Seo</div>
-          <div class="alumni-hover-hint">Hover to learn more</div>
-        </div>
-
-        <div class="alumni-overlay">
-          <div class="alumni-overlay-name">Brian Seo</div>
-
-          <div class="served-label">KSEA E-Board</div>
-          <div class="served">
-              <span class="served-position">Senior Advisor · 2024–2025</span><br>
-              <span class="served-position">Vice President · 2023–2024</span><br>
-              <span class="served-position">Event Coordinator · 2022–2023</span><br>
-              <span class="served-position">Freshman Representative · 2021–2022</span>
-          </div>
-
-          <div class="now-label">Where are they now?</div>
-          <p>Medical Student at Wayne State University School of Medicine.</p>
-        </div>
-      </div>
-
-      <!-- Izzy Yoon -->
-      <div class="alumni-card" tabindex="0">
-        <div class="alumni-front">
-          <div class="alumni-photo-wrap">
-            <img
-              class="alumni-photo"
-              src="../alumni_images/isabellayoon.jpeg"
-              alt="Izzy Yoon"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-            >
-            <div class="alumni-initials" style="display:none;">IY</div>
-          </div>
-
-          <div class="alumni-name">Izzy Yoon</div>
-          <div class="alumni-hover-hint">Hover to learn more</div>
-        </div>
-
-        <div class="alumni-overlay">
-          <div class="alumni-overlay-name">Izzy Yoon</div>
-
-          <div class="served-label">KSEA E-Board</div>
-          <div class="served">
-              <span class="served-position">Vice President · 2024–2025</span><br>
-              <span class="served-position">Secretary · 2023–2024</span><br>
-              <span class="served-position">Marketing · 2022–2023</span><br>
-              <span class="served-position">Freshman Representative · 2021–2022</span>
-          </div>
-
-          <div class="now-label">Where are they now?</div>
-          <p>Front end developer for JB Mobility.</p>
-        </div>
-      </div>
-
-      <!-- Michael Chawoong Koo -->
-      <div class="alumni-card" tabindex="0">
-        <div class="alumni-front">
-          <div class="alumni-photo-wrap">
-            <img
-              class="alumni-photo"
-              src="../alumni_images/michaelkoo.png"
-              alt="Michael Chawoong Koo"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-            >
-            <div class="alumni-initials" style="display:none;">MK</div>
-          </div>
-
-          <div class="alumni-name">Michael Chawoong Koo</div>
-          <div class="alumni-hover-hint">Hover to learn more</div>
-        </div>
-
-        <div class="alumni-overlay">
-          <div class="alumni-overlay-name">Michael Chawoong Koo</div>
-
-          <div class="served-label">KSEA E-Board</div>
-          <div class="served">
-              <span class="served-position">Director of Community Engagement · 2022–2025</span>
-          </div>
-
-          <div class="now-label">Where are they now?</div>
-          <p>AI Engineer.</p>
-        </div>
-      </div>
-
-      <!-- Michelle Siyeon Baek -->
-      <div class="alumni-card" tabindex="0">
-        <div class="alumni-front">
-          <div class="alumni-photo-wrap">
-            <img
-              class="alumni-photo"
-              src="../alumni_images/michellebaek.jpeg"
-              alt="Michelle Siyeon Baek"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-            >
-            <div class="alumni-initials" style="display:none;">MB</div>
-          </div>
-
-          <div class="alumni-name">Michelle Siyeon Baek</div>
-          <div class="alumni-hover-hint">Hover to learn more</div>
-        </div>
-
-        <div class="alumni-overlay">
-          <div class="alumni-overlay-name">Michelle Siyeon Baek</div>
-
-          <div class="served-label">KSEA E-Board</div>
-          <div class="served">
-              <span class="served-position">President · 2023–2024</span><br>
-              <span class="served-position">Secretary · 2022–2023</span><br>
-              <span class="served-position">Marketing Chair · 2021–2022</span><br>
-              <span class="served-position">Freshman Representative · 2020–2021</span>
-          </div>
-
-          <div class="now-label">Where are they now?</div>
-          <p>Medical student at Michigan State University College of Human Medicine.</p>
-        </div>
-      </div>
-
-      <!-- Elina Kang -->
-      <div class="alumni-card" tabindex="0">
-        <div class="alumni-front">
-          <div class="alumni-photo-wrap">
-            <img
-              class="alumni-photo"
-              src="../eboard_images/Elina.jpeg"
-              alt="Elina Kang"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-            >
-            <div class="alumni-initials" style="display:none;">EK</div>
-          </div>
-
-          <div class="alumni-name">Elina Kang</div>
-          <div class="alumni-hover-hint">Hover to learn more</div>
-        </div>
-
-        <div class="alumni-overlay">
-          <div class="alumni-overlay-name">Elina Kang</div>
-
-          <div class="served-label">KSEA E-Board</div>
-          <div class="served">
-              <span class="served-position">Treasurer · 2022–2023</span><br>
-              <span class="served-position">Secretary · 2021–2022</span>
-          </div>
-
-          <div class="now-label">Where are they now?</div>
-          <p>Corporate finance in San Francisco.</p>
-        </div>
-      </div>
-
-      <!-- Madeleine (Lena) Lee -->
-      <div class="alumni-card" tabindex="0">
-        <div class="alumni-front">
-          <div class="alumni-photo-wrap">
-            <img
-              class="alumni-photo"
-              src="../alumni_images/madeleinelee.jpg"
-              alt="Madeleine (Lena) Lee"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-            >
-            <div class="alumni-initials" style="display:none;">ML</div>
-          </div>
-
-          <div class="alumni-name">Madeleine (Lena) Lee</div>
-          <div class="alumni-hover-hint">Hover to learn more</div>
-        </div>
-
-        <div class="alumni-overlay">
-          <div class="alumni-overlay-name">Madeleine (Lena) Lee</div>
-
-          <div class="served-label">KSEA E-Board</div>
-          <div class="served">
-              <span class="served-position">Senior Advisor · 2022–2023</span><br>
-              <span class="served-position">President · 2021–2022</span><br>
-              <span class="served-position">Secretary · 2020–2021</span>
-          </div>
-
-          <div class="now-label">Where are they now?</div>
-          <p>Medical student at the University of Michigan.</p>
-        </div>
-      </div>
-
-      <!-- Sean Lee -->
-      <div class="alumni-card" tabindex="0">
-        <div class="alumni-front">
-          <div class="alumni-photo-wrap">
-            <img
-              class="alumni-photo"
-              src="../alumni_images/seanlee.png"
-              alt="Sean Lee"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-            >
-            <div class="alumni-initials" style="display:none;">SL</div>
-          </div>
-
-          <div class="alumni-name">Sean Lee</div>
-          <div class="alumni-hover-hint">Hover to learn more</div>
-        </div>
-
-        <div class="alumni-overlay">
-          <div class="alumni-overlay-name">Sean Lee</div>
-
-          <div class="served-label">KSEA E-Board</div>
-          <div class="served">
-              <span class="served-position">Senior Advisor · 2021–2022</span><br>
-              <span class="served-position">President · 2020–2021</span><br>
-              <span class="served-position">Event Coordinator · 2019–2020</span>
-          </div>
-
-          <div class="now-label">Where are they now?</div>
-          <p>Mechanical engineer at Daifuku designing conveyor belt systems for airport baggage handling systems across the US.</p>
-        </div>
-      </div>
-
-      <!-- Austin Kim -->
-      <div class="alumni-card" tabindex="0">
-        <div class="alumni-front">
-          <div class="alumni-photo-wrap">
-            <img
-              class="alumni-photo"
-              src="../eboard_images/Austin.jpeg"
-              alt="Austin Kim"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-            >
-            <div class="alumni-initials" style="display:none;">AK</div>
-          </div>
-
-          <div class="alumni-name">Austin Kim</div>
-          <div class="alumni-hover-hint">Hover to learn more</div>
-        </div>
-
-        <div class="alumni-overlay">
-          <div class="alumni-overlay-name">Austin Kim</div>
-
-          <div class="served-label">KSEA E-Board</div>
-          <div class="served">
-              <span class="served-position">Academic Chair · 2021–2022</span><br>
-              <span class="served-position">Event Coordinator · 2020–2021</span>
-          </div>
-
-          <div class="now-label">Where are they now?</div>
-          <p>Emergency department medical scribe after graduating, and now medical student at NYITCOM.</p>
-        </div>
-      </div>
-
-      <!-- Hojin Han -->
-      <div class="alumni-card" tabindex="0">
-        <div class="alumni-front">
-          <div class="alumni-photo-wrap">
-            <img
-              class="alumni-photo"
-              src="../eboard_images/Hojin.jpeg"
-              alt="Hojin Han"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-            >
-            <div class="alumni-initials" style="display:none;">HH</div>
-          </div>
-
-          <div class="alumni-name">Hojin Han</div>
-          <div class="alumni-hover-hint">Hover to learn more</div>
-        </div>
-
-        <div class="alumni-overlay">
-          <div class="alumni-overlay-name">Hojin Han</div>
-
-          <div class="served-label">KSEA E-Board</div>
-          <div class="served">
-              <span class="served-position">Senior Advisor · 2019–2021</span><br>
-              <span class="served-position">Event Coordinator · 2018–2019</span>
-          </div>
-
-          <div class="now-label">Where are they now?</div>
-          <p>Lawyer working on tech-related litigation.</p>
-        </div>
-      </div>
-
-      </div>
-    </div>
+    <nav class="board-nav">
+      <a href="../eboard/eboard.html" class="active">2026–2027 Board</a>
+      <a href="../eboard/eboard-2025-2026.html">2025–2026 Board</a>
+      <a href="../eboard/alumni.html">Alumni</a>
+    </nav>
 
   </section>
 </body>
