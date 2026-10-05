@@ -443,6 +443,62 @@
       .page-title { font-size: 34px; }
       a.pill { font-size: 14px; padding: 10px 18px; }
     }
+
+    /* Questions & Suggestions */
+
+.inquiries-section {
+  position: relative;
+  z-index: 2;
+  max-width: 920px;
+  margin: 70px auto 0;
+}
+
+.inquiries-card {
+  background: rgba(255, 255, 255, 0.55);
+  border: 2px solid var(--border-soft);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 12px 30px rgba(63, 93, 174, 0.12);
+  text-align: center;
+}
+
+.inquiries-card h2 {
+  font-size: 40px;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.inquiries-intro {
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 0.88;
+  max-width: 650px;
+  margin: 0 auto 30px;
+}
+
+.inquiries-card iframe {
+  border-radius: 16px;
+  background: white;
+}
+
+@media (max-width: 768px) {
+
+  .inquiries-section {
+    margin-top: 50px;
+  }
+
+  .inquiries-card {
+    padding: 25px 15px;
+  }
+
+  .inquiries-card h2 {
+    font-size: 30px;
+  }
+
+  .inquiries-intro {
+    font-size: 14px;
+  }
+}
   </style>
 </head>
 <body>
@@ -481,8 +537,8 @@
 
       <div class="pill-row">
         <a class="pill active" href="https://docs.google.com/document/d/17PS8A_nC7hTJBHWRYa7Udsc_qJP3tyTPPqJ4xg7oblg/edit?tab=t.0" target=_blank>Register Here </a>
-        <a class="pill" href="https://docs.google.com/forms/d/e/1FAIpQLSf4JxgSXYvr5oht6xfILlnvEjJOuKS9Sk-9h_yLDouAYUWXGg/viewform">Join Mailing List</a>
-        <a class="pill" href="https://docs.google.com/forms/d/e/1FAIpQLSe34HBOFmsNe5A6alaUxjkiofcgsheGiVcoQRDKJa3T3cUZxA/viewform" title="Instagram">Join Committees</a>
+        <a class="pill" href="https://docs.google.com/forms/d/e/1FAIpQLSf4JxgSXYvr5oht6xfILlnvEjJOuKS9Sk-9h_yLDouAYUWXGg/viewform" target=_blank>Join Mailing List</a>
+        <a class="pill" href="https://docs.google.com/forms/d/e/1FAIpQLSe34HBOFmsNe5A6alaUxjkiofcgsheGiVcoQRDKJa3T3cUZxA/viewform" target=_blank>Join Committees</a>
       </div>
     </div>
 
@@ -490,32 +546,101 @@
       <h2 id="rush-heading" class="timeline-section-title">Fall 2026 Schedule</h2>
 
       <ol class="timeline">
-        <li class="timeline-item">
-          <div class="timeline-card">
-            <h3>Festifall</h3>
-            <div class="timeline-meta">9/2 3-5PM</div>
-            <p>
-            </p>
-          </div>
-        </li>
-        <li class="timeline-item">
-          <div class="timeline-card">
-            <h3>Mass Meeting</h3>
-            <div class="timeline-meta">9/11 5-6PM</div>
-            <p>
-            </p>
-          </div>
-        </li>
-        <li class="timeline-item">
-          <div class="timeline-card">
-            <h3>Picnic Social</h3>
-            <div class="timeline-meta">TBD</div>
-            <p>
-            </p>
-          </div>
-        </li>
-      </ol>
-    </section>
+  <li class="timeline-item">
+    <div class="timeline-card">
+      <h3>Festifall</h3>
+      <div class="timeline-meta">9/2 3-5PM</div>
+      <p>
+        Diag Table C-61
+      </p>
+    </div>
+  </li>
+
+  <li class="timeline-item">
+    <div class="timeline-card">
+      <h3>Mass Meeting</h3>
+      <div class="timeline-meta">9/11 5-6PM</div>
+      <p>
+        Michigan League Room 4
+      </p>
+    </div>
+  </li>
+
+  <li class="timeline-item">
+    <div class="timeline-card">
+      <h3>Picnic Social</h3>
+      <div class="timeline-meta">9/18 5-7PM</div>
+      <p>
+        Law Quad
+      </p>
+    </div>
+  </li>
+
+   <li class="timeline-item">
+    <div class="timeline-card">
+      <h3>Matcha Brownies Fundraiser</h3>
+      <div class="timeline-meta">9/30 2-5PM</div>
+      <p>
+        Haven Hall Posting Wall A
+      </p>
+    </div>
+  </li>
+
+  <li class="timeline-item">
+    <div class="timeline-card">
+      <h3>Family STEM Night</h3>
+      <div class="timeline-meta">10/7 6-7:30PM</div>
+      <p>
+        Burns Park Elementary School
+      </p>
+    </div>
+  </li>
+
+  <li class="timeline-item">
+    <div class="timeline-card">
+      <h3>KSEA Headshots</h3>
+      <div class="timeline-meta">10/10 12:30-2:30PM</div>
+      <p>
+        Ross Blau Hall
+      </p>
+    </div>
+  </li>
+
+  <li class="timeline-item">
+    <div class="timeline-card">
+      <h3>Upcoming Panel Event</h3>
+      <div class="timeline-meta">10/29 6-8PM</div>
+      <p>
+        TBA
+      </p>
+    </div>
+  </li>
+</ol>
+</section>
+
+<br><br><br><br>
+<section class="inquiries-section">
+  <div class="inquiries-card">
+
+    <h2>Questions or Suggestions?</h2>
+
+    <p class="inquiries-intro">
+      Have a question about KSEA, an idea for a future event, or something
+      you think we could improve? We'd love to hear from you!
+    </p>
+
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLSewQchgIe05yNk2mxuzagjNbUwgtF66hec6dVKv2wqdnOOWqA/viewform?usp=header"
+      width="100%"
+      height="700"
+      frameborder="0"
+      marginheight="0"
+      marginwidth="0">
+      Loading…
+    </iframe>
+
+  </div>
+</section>
   </div>
 </body>
 </html>
