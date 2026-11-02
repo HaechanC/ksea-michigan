@@ -434,6 +434,7 @@
       .timeline-card { padding: 14px 16px 16px; }
       .timeline-card h3 { font-size: 18px; }
       .timeline-card p { font-size: 14px; }
+      /*Refit Calendar */
     }
 
     @media (max-width: 420px) {
@@ -442,6 +443,54 @@
       nav { gap: 14px; }
       .page-title { font-size: 34px; }
       a.pill { font-size: 14px; padding: 10px 18px; }
+    }
+    /* Event Calendar */
+
+    .calendar-section{
+      position: relative;
+      z-index: 2;
+      max-width: 920px;
+      margin: 70px auto 0;
+    }
+
+    .calendar-card {
+      background: #3F5DAE;
+      border: 2px solid var(--border-soft);
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: 0 12px 30px rgba(63, 93, 174, 0.12);
+      text-align: center;
+    }
+
+    .calendar-card h2 {
+      font-size: 40px;
+      font-weight: 900;
+      margin-bottom: 12px;
+      color:rgba(255, 255, 255, 0.9);
+    }
+
+    .calendar-intro {
+      font-size: 16px;
+      line-height: 1.6;
+      opacity: 0.88;
+      max-width: 650px;
+      margin: 0 auto 30px;
+      color:rgba(255, 255, 255, 0.9);
+    }
+
+    .calendar-add {
+      margin-bottom: 30px;
+      font-size: 18px;
+      padding: 12px 28px;
+    }
+    @media(max-width:768px)
+    {
+      .calendar-section { margin-top: 50px; }
+      .calendar-card { padding: 25px 15px; }
+      .calendar-card h2 { font-size: 30px; }
+      .calendar-intro { font-size: 14px; }
+      .calendar-add { font-size: 14px; padding: 10px 18px; }
+      .calendar-frame iframe { height: 500px; }
     }
 
     /* Questions & Suggestions */
@@ -610,25 +659,60 @@
 
   <li class="timeline-item">
     <div class="timeline-card">
-      <h3>Speaker Event with Professor James J. Moon, PHD</h3>
-      <div class="timeline-meta">10/29 6:30-7:30PM</div>
+      <h3>Pumpkin Snickerdoodle Cookies Fundraiser</h3>
+      <div class="timeline-meta">10/29 1:00-5:00PM</div>
       <p>
-        Central Campus Classroom Buildling (CCCB) 3460
+        Mason Hall
       </p>
     </div>
   </li>
 
   <li class="timeline-item">
     <div class="timeline-card">
-      <h3>Upcoming Fundraiser Event</h3>
-      <div class="timeline-meta">10/28 Time TBD</div>
+      <h3>Speaker Event with Professor James J. Moon, PhD</h3>
+      <div class="timeline-meta">10/29 6:30-7:30PM</div>
       <p>
-        TBD
+        Mason Hall 2469
+      </p>
+    </div>
+  </li>
+
+  <li class="timeline-item">
+    <div class="timeline-card">
+      <h3>KSEA Game Night</h3>
+      <div class="timeline-meta">11/11 7:00-9:00PM</div>
+      <p>
+        Mason Hall 3463
       </p>
     </div>
   </li>
 
 </ol>
+</section>
+
+<br><br><br><br>
+<section class="calendar-section">
+  <div class="calendar-card">
+    <h2>Event Calendar</h2>
+    <p class="calendar-intro">
+      Add events to receive notifications to our future events!
+    </p>
+    <a class="pill active calendar-add"
+       href="https://calendar.google.com/calendar/r?cid=Y18wYjA2ODgzNzIxMDQ0YzFiOWZhNmU3NWY1Y2U4ZTQzYTM3MzIwMGVkMmRhYzMxYWZmMTc3MThkZDIzOGQ1MjVlQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20"
+       target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-google"></i>&nbsp; Click here to add to Google Calendar
+    </a>
+
+    <iframe
+      src="https://calendar.google.com/calendar/embed?src=c_0b06883721044c1b9fa6e75f5ce8e43a373200ed2dac31aff17718dd238d525e%40group.calendar.google.com&ctz=America%2FNew_York"
+      width="100%"
+      height="700"
+      frameborder="0"
+      marginheight="0"
+      marginwidth="0">
+      Loading…
+    </iframe>
+  </div>
 </section>
 
 <br><br><br><br>
