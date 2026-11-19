@@ -1,0 +1,7 @@
+# Secrets: never commit these to the public GitHub Pages repo
+.env
+.env.*
+
+# Local / OS files
+node_modules/
+.DS_Store

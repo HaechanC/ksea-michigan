@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KSEA - University of Michigan | Jobs &amp; Internships</title>
+  <meta name="description" content="Jobs, internships, and research opportunities curated by KSEA at the University of Michigan." />
+  <link rel="stylesheet" href="jobs.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <a href="../main/main.html" class="logo-link" aria-label="Go to home page">
+      <div class="logo-container">
+        <div class="logo-circle">
+          <img src="../images/ksea_logo.jpg" alt="ksea logo">
+        </div>
+        <div class="logo-text">
+          <span class="ksea">KSEA</span>
+          <span class="divider"> | </span>
+          <span class="university">at University<br>of Michigan</span>
+        </div>
+      </div>
+    </a>
+    <nav>
+      <a href="../events/events.html">Events</a>
+      <a href="../eboard/eboard.html">E-Board</a>
+      <a href="../join/join.html">Join</a>
+      <a class="active" href="../jobs/jobs.html" aria-current="page">Jobs</a>
+      <a href="https://www.instagram.com/ksea.michigan/" target="_blank" rel="noopener noreferrer" class="instagram-link" aria-label="KSEA Michigan on Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </nav>
+  </header>
+
+  <div class="page">
+    <div class="curve-1"></div>
+    <div class="curve-2"></div>
+
+    <main class="content">
+      <!-- Hero -->
+      <section class="jobs-hero">
+        <h1 class="page-title">Jobs &amp; Internships</h1>
+        <p class="page-subtitle">
+          Internships, research positions, and full-time roles shared by the KSEA Michigan E-Board and alumni network.
+          Find your next opportunity, and reach out to us if you'd like a referral or resume review! 🚀
+        </p>
+      </section>
+
+      <!-- Controls -->
+      <section class="controls" aria-label="Search and filter opportunities">
+        <div class="controls-top">
+          <div class="search-wrap">
+            <i class="fas fa-search" aria-hidden="true"></i>
+            <label for="searchInput" class="sr-only">Search jobs</label>
+            <input id="searchInput" class="search-input" type="search" autocomplete="off"
+                   placeholder="Search title, company, location, or keywords…" />
+            <button id="searchClear" class="search-clear" type="button" aria-label="Clear search">
+              <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <div class="select-wrap">
+            <label for="sortSelect">Sort</label>
+            <select id="sortSelect" class="control-select">
+              <option value="newest">Newest First</option>
+              <option value="deadline">Deadline Soonest</option>
+              <option value="company">Company (A–Z)</option>
+            </select>
+          </div>
+
+          <div class="view-switch" role="group" aria-label="Layout">
+            <button class="view-btn" type="button" data-view="gallery" aria-pressed="true">
+              <i class="fas fa-th-large" aria-hidden="true"></i> Gallery
+            </button>
+            <button class="view-btn" type="button" data-view="list" aria-pressed="false">
+              <i class="fas fa-list" aria-hidden="true"></i> List
+            </button>
+          </div>
+        </div>
+
+        <div class="filter-groups">
+          <span class="filter-label" id="typeLabel">Type</span>
+          <div class="pill-group" role="group" aria-labelledby="typeLabel" id="typeFilters">
+            <button class="pill" type="button" data-type="All" aria-pressed="true">All</button>
+            <button class="pill" type="button" data-type="Internship" aria-pressed="false">Internship</button>
+            <button class="pill" type="button" data-type="Full-Time" aria-pressed="false">Full-Time</button>
+            <button class="pill" type="button" data-type="Research / Lab" aria-pressed="false">Research / Lab</button>
+            <button class="pill" type="button" data-type="Part-Time" aria-pressed="false">Part-Time</button>
+          </div>
+
+          <span class="filter-label" id="locLabel">Location</span>
+          <div class="pill-group" role="group" aria-labelledby="locLabel" id="locationFilters">
+            <button class="pill" type="button" data-location="All" aria-pressed="true">All</button>
+            <button class="pill" type="button" data-location="Ann Arbor" aria-pressed="false">Ann Arbor / Campus</button>
+            <button class="pill" type="button" data-location="Michigan" aria-pressed="false">Michigan</button>
+            <button class="pill" type="button" data-location="Remote" aria-pressed="false">Remote</button>
+          </div>
+        </div>
+      </section>
+
+      <div id="sourceNotice" class="source-notice" hidden>
+        <i class="fas fa-info-circle" aria-hidden="true"></i>
+        <span id="sourceNoticeText"></span>
+      </div>
+
+      <!-- Status bar -->
+      <div class="status-bar">
+        <p class="result-count" id="resultCount" aria-live="polite">Loading opportunities…</p>
+        <button id="closedToggle" class="closed-toggle" type="button" aria-pressed="false">
+          <i class="fas fa-archive" aria-hidden="true"></i>
+          <span id="closedToggleText">View Closed Jobs (0)</span>
+        </button>
+      </div>
+
+      <div id="archiveBanner" class="archive-banner" hidden>
+        <i class="fas fa-archive" aria-hidden="true"></i>
+        <span>You're viewing <strong>closed</strong> postings for reference. These are no longer accepting applications.</span>
+      </div>
+
+      <!-- Results -->
+      <section id="results" aria-live="polite" aria-busy="true">
+        <!-- Loading skeleton (replaced by JS) -->
+        <div class="skeleton-grid" aria-hidden="true">
+          <div class="skeleton-card"><div class="sk sk-badge"></div><div class="sk sk-title"></div><div class="sk sk-line"></div><div class="sk sk-block"></div></div>
+          <div class="skeleton-card"><div class="sk sk-badge"></div><div class="sk sk-title"></div><div class="sk sk-line"></div><div class="sk sk-block"></div></div>
+          <div class="skeleton-card"><div class="sk sk-badge"></div><div class="sk sk-title"></div><div class="sk sk-line"></div><div class="sk sk-block"></div></div>
+        </div>
+        <p class="loading-text">Loading the latest postings…</p>
+      </section>
+    </main>
+  </div>
+
+  <!-- Job details modal -->
+  <dialog id="jobModal" class="job-modal" aria-labelledby="modalTitle">
+    <div class="modal-header">
+      <div class="card-badges" id="modalBadges"></div>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <p class="modal-company" id="modalCompany"></p>
+      <button class="modal-close" type="button" id="modalClose" aria-label="Close details">
+        <i class="fas fa-times" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-facts" id="modalFacts"></div>
+      <div id="modalSections"></div>
+    </div>
+    <div class="modal-footer" id="modalFooter"></div>
+  </dialog>
+
+  <script src="jobs.js"></script>
+</body>
+</html>

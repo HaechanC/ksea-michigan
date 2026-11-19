@@ -313,6 +313,9 @@
       opacity: 0.88;
     }
 
+    /* Keep 5 nav links from overflowing on mid-size screens */
+    @media (max-width: 1280px) { nav { gap: 56px; } }
+
     @media (max-width: 1024px) {
       header { padding: 20px 30px; }
       .page { padding: 50px 30px 70px; }
@@ -569,6 +572,7 @@
       <a href="../events/events.html">Events</a>
       <a href="../eboard/eboard.html">E-Board</a>
       <a class="active" href="../join/join.html">Join</a>
+      <a href="../jobs/jobs.html">Jobs</a>
       <a href="https://www.instagram.com/ksea.michigan/" target="_blank" rel="noopener noreferrer" class="instagram-link">
         <i class="fab fa-instagram" style="font-size: 32px; color: #141ad9;"></i>
       </a>
@@ -683,6 +687,16 @@
       <div class="timeline-meta">11/11 7:00-9:00PM</div>
       <p>
         Mason Hall 3463
+      </p>
+    </div>
+  </li>
+
+  <li class="timeline-item">
+    <div class="timeline-card">
+      <h3>Backpacking Event</h3>
+      <div class="timeline-meta">11/17 7:00-9:00PM</div>
+      <p>
+        Mason Hall 3401
       </p>
     </div>
   </li>

@@ -424,6 +424,9 @@
     }
 
     /* Responsive */
+    /* Keep 5 nav links from overflowing on mid-size screens */
+    @media (max-width: 1280px) { nav { gap: 56px; } }
+
     @media (max-width: 1024px){
       header{ padding: 20px 30px; }
       .page{ padding: 60px 30px 40px; }
@@ -615,6 +618,7 @@
       <a class="active" href="../events/events.html">Events</a>
       <a href="../eboard/eboard.html">E-Board</a>
       <a href="../join/join.html">Join</a>
+      <a href="../jobs/jobs.html">Jobs</a>
       <a href="https://www.instagram.com/ksea.michigan/" target="_blank" class="instagram-link">
         <i class="fab fa-instagram" style="font-size: 32px; color: #141ad9;"></i>
       </a>
